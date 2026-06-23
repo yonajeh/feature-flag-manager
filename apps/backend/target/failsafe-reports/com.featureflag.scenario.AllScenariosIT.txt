@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.featureflag.scenario.AllScenariosIT
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.19 s -- in com.featureflag.scenario.AllScenariosIT

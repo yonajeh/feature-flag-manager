@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.featureflag.service.TokenServiceTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.106 s -- in com.featureflag.service.TokenServiceTest

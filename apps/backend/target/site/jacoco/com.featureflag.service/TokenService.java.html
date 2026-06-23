@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TokenService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">feature-flag-manager</a> &gt; <a href="index.source.html" class="el_package">com.featureflag.service</a> &gt; <span class="el_source">TokenService.java</span></div><h1>TokenService.java</h1><pre class="source lang-java linenums">package com.featureflag.service;
+
+import com.featureflag.config.FfConfig;
+import com.featureflag.domain.ApiToken;
+import com.featureflag.domain.ApiTokenStatus;
+import com.featureflag.domain.Application;
+import com.featureflag.dto.ApiTokenCreatedDto;
+import com.featureflag.dto.ApiTokenMetadataDto;
+import com.featureflag.exception.NotFoundException;
+import com.featureflag.exception.UnauthorizedException;
+import com.featureflag.mapper.DtoMapper;
+import com.featureflag.repository.ApiTokenRepository;
+import com.featureflag.repository.ApplicationRepository;
+import com.featureflag.security.AuthenticatedApplication;
+import com.featureflag.security.TokenCrypto;
+import io.quarkus.logging.Log;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
+import java.time.Instant;
+import java.util.List;
+import java.util.UUID;
+
+@ApplicationScoped
+<span class="fc" id="L25">public class TokenService {</span>
+
+    @Inject
+    ApiTokenRepository tokenRepository;
+
+    @Inject
+    ApplicationRepository applicationRepository;
+
+    @Inject
+    FfConfig config;
+
+    public AuthenticatedApplication authenticate(String appName, String plaintextToken) {
+<span class="pc bpc" id="L37" title="3 of 8 branches missed.">        if (appName == null || appName.isBlank() || plaintextToken == null || plaintextToken.isBlank()) {</span>
+<span class="fc" id="L38">            throw new UnauthorizedException(&quot;Missing authentication headers&quot;);</span>
+        }
+
+<span class="fc" id="L41">        Application app = applicationRepository.findByName(appName)</span>
+<span class="pc" id="L42">                .orElseThrow(() -&gt; new UnauthorizedException(&quot;Invalid credentials&quot;));</span>
+
+<span class="fc" id="L44">        String hash = TokenCrypto.hashToken(plaintextToken, config.token().pepper());</span>
+<span class="fc" id="L45">        ApiToken token = tokenRepository.findActiveByHash(hash)</span>
+<span class="fc" id="L46">                .orElseThrow(() -&gt; new UnauthorizedException(&quot;Invalid credentials&quot;));</span>
+
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">        if (!token.applicationId.equals(app.id)) {</span>
+<span class="nc" id="L49">            throw new UnauthorizedException(&quot;Invalid credentials&quot;);</span>
+        }
+
+<span class="pc bpc" id="L52" title="3 of 4 branches missed.">        if (token.expiresAt != null &amp;&amp; token.expiresAt.isBefore(Instant.now())) {</span>
+<span class="nc" id="L53">            throw new UnauthorizedException(&quot;Token expired&quot;);</span>
+        }
+
+<span class="fc" id="L56">        updateLastUsedAsync(token.id);</span>
+<span class="fc" id="L57">        return new AuthenticatedApplication(app.id, app.name, token.id);</span>
+    }
+
+    void updateLastUsedAsync(UUID tokenId) {
+<span class="fc" id="L61">        Thread.startVirtualThread(() -&gt; {</span>
+            try {
+<span class="fc" id="L63">                updateLastUsed(tokenId);</span>
+<span class="nc" id="L64">            } catch (Exception e) {</span>
+<span class="nc" id="L65">                Log.warn(&quot;Failed to update lastUsedAt for token &quot; + tokenId, e);</span>
+<span class="fc" id="L66">            }</span>
+<span class="fc" id="L67">        });</span>
+<span class="fc" id="L68">    }</span>
+
+    @Transactional
+    public void updateLastUsed(UUID tokenId) {
+<span class="fc" id="L72">        ApiToken token = tokenRepository.findByIdOptional(tokenId)</span>
+<span class="fc" id="L73">                .orElse(null);</span>
+<span class="pc bpc" id="L74" title="1 of 2 branches missed.">        if (token != null) {</span>
+<span class="nc" id="L75">            token.lastUsedAt = Instant.now();</span>
+<span class="nc" id="L76">            tokenRepository.persist(token);</span>
+        }
+<span class="fc" id="L78">    }</span>
+
+    @Transactional
+    public ApiTokenCreatedDto generateToken(UUID applicationId, Instant expiresAt) {
+<span class="fc" id="L82">        requireApplication(applicationId);</span>
+<span class="fc" id="L83">        return createToken(applicationId, expiresAt);</span>
+    }
+
+    @Transactional
+    public ApiTokenCreatedDto rotateToken(UUID applicationId, UUID tokenId) {
+<span class="nc" id="L88">        requireApplication(applicationId);</span>
+<span class="nc" id="L89">        tokenRepository.findByIdAndApplicationId(tokenId, applicationId)</span>
+<span class="nc" id="L90">                .orElseThrow(() -&gt; new NotFoundException(&quot;Token not found&quot;));</span>
+<span class="nc" id="L91">        return createToken(applicationId, null);</span>
+    }
+
+    @Transactional
+    public ApiTokenMetadataDto revokeToken(UUID applicationId, UUID tokenId) {
+<span class="fc" id="L96">        requireApplication(applicationId);</span>
+<span class="fc" id="L97">        ApiToken token = tokenRepository.findByIdAndApplicationId(tokenId, applicationId)</span>
+<span class="fc" id="L98">                .orElseThrow(() -&gt; new NotFoundException(&quot;Token not found&quot;));</span>
+<span class="pc bpc" id="L99" title="1 of 2 branches missed.">        if (token.status == ApiTokenStatus.REVOKED) {</span>
+<span class="nc" id="L100">            return DtoMapper.toMetadataDto(token);</span>
+        }
+<span class="fc" id="L102">        token.status = ApiTokenStatus.REVOKED;</span>
+<span class="fc" id="L103">        token.revokedAt = Instant.now();</span>
+<span class="fc" id="L104">        tokenRepository.persist(token);</span>
+<span class="fc" id="L105">        return DtoMapper.toMetadataDto(token);</span>
+    }
+
+    public List&lt;ApiTokenMetadataDto&gt; listTokens(UUID applicationId) {
+<span class="fc" id="L109">        requireApplication(applicationId);</span>
+<span class="fc" id="L110">        return tokenRepository.findByApplicationId(applicationId).stream()</span>
+<span class="fc" id="L111">                .map(DtoMapper::toMetadataDto)</span>
+<span class="fc" id="L112">                .toList();</span>
+    }
+
+    private ApiTokenCreatedDto createToken(UUID applicationId, Instant expiresAt) {
+<span class="fc" id="L116">        String plaintext = TokenCrypto.generatePlaintextToken();</span>
+<span class="fc" id="L117">        ApiToken token = new ApiToken();</span>
+<span class="fc" id="L118">        token.applicationId = applicationId;</span>
+<span class="fc" id="L119">        token.tokenHash = TokenCrypto.hashToken(plaintext, config.token().pepper());</span>
+<span class="fc" id="L120">        token.tokenPrefix = TokenCrypto.extractPrefix(plaintext);</span>
+<span class="fc" id="L121">        token.status = ApiTokenStatus.ACTIVE;</span>
+<span class="fc" id="L122">        token.expiresAt = expiresAt;</span>
+<span class="fc" id="L123">        tokenRepository.persist(token);</span>
+<span class="fc" id="L124">        return DtoMapper.toCreatedDto(token, plaintext);</span>
+    }
+
+    private Application requireApplication(UUID applicationId) {
+<span class="fc" id="L128">        return applicationRepository.findByIdOptional(applicationId)</span>
+<span class="pc" id="L129">                .orElseThrow(() -&gt; new NotFoundException(&quot;Application not found&quot;));</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

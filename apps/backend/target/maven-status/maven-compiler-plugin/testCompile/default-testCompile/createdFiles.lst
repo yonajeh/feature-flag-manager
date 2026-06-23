@@ -1,0 +1,10 @@
+com/featureflag/testsupport/PostgresTestResource.class
+com/featureflag/service/AdminAuthServiceTest.class
+com/featureflag/service/FeatureFlagServiceTest.class
+com/featureflag/scenario/AllScenariosIT.class
+com/featureflag/testsupport/TestApiClient.class
+com/featureflag/JavaVersionTest.class
+com/featureflag/security/TokenCryptoTest.class
+com/featureflag/service/TokenServiceTest.class
+com/featureflag/service/ApplicationServiceTest.class
+com/featureflag/testsupport/QuarkusJarTestResource.class

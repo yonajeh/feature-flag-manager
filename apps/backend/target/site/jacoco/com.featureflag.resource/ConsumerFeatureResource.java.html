@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ConsumerFeatureResource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">feature-flag-manager</a> &gt; <a href="index.source.html" class="el_package">com.featureflag.resource</a> &gt; <span class="el_source">ConsumerFeatureResource.java</span></div><h1>ConsumerFeatureResource.java</h1><pre class="source lang-java linenums">package com.featureflag.resource;
+
+import com.featureflag.dto.ConsumerFeatureFlagDto;
+import com.featureflag.security.AuthenticatedApplication;
+import com.featureflag.security.ConsumerAuth;
+import com.featureflag.security.ConsumerAuthFilter;
+import com.featureflag.service.FeatureFlagService;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.Context;
+import jakarta.ws.rs.core.MediaType;
+import java.util.List;
+
+@Path(&quot;/api/v1/features&quot;)
+@Produces(MediaType.APPLICATION_JSON)
+@ConsumerAuth
+<span class="nc" id="L17">public class ConsumerFeatureResource {</span>
+
+    @Inject
+    FeatureFlagService featureFlagService;
+
+    @GET
+    public List&lt;ConsumerFeatureFlagDto&gt; list(@Context jakarta.ws.rs.container.ContainerRequestContext ctx) {
+<span class="nc" id="L24">        AuthenticatedApplication auth = (AuthenticatedApplication) ctx.getProperty(ConsumerAuthFilter.AUTH_CONTEXT_PROPERTY);</span>
+<span class="nc" id="L25">        return featureFlagService.listForConsumer(auth.getApplicationId());</span>
+    }
+
+    @GET
+    @Path(&quot;/{key}&quot;)
+    public ConsumerFeatureFlagDto get(
+            @Context jakarta.ws.rs.container.ContainerRequestContext ctx,
+            @PathParam(&quot;key&quot;) String key) {
+<span class="nc" id="L33">        AuthenticatedApplication auth = (AuthenticatedApplication) ctx.getProperty(ConsumerAuthFilter.AUTH_CONTEXT_PROPERTY);</span>
+<span class="nc" id="L34">        return featureFlagService.getForConsumer(auth.getApplicationId(), key);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

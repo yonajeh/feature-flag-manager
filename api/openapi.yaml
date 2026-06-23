@@ -1,0 +1,643 @@
+openapi: 3.0.3
+info:
+  title: Feature Flag Manager API
+  version: 1.0.0
+  description: |
+    Feature flag management platform with consumer (M2M token) and admin (JWT) APIs.
+
+servers:
+  - url: http://localhost:8080
+    description: Local development
+
+tags:
+  - name: Consumer
+    description: Application-scoped feature flag reads (X-App-Name + X-App-Token)
+  - name: Admin Auth
+    description: Admin authentication
+  - name: Admin Applications
+    description: Application lifecycle management
+  - name: Admin Tokens
+    description: API token management
+  - name: Admin Feature Flags
+    description: Feature flag CRUD per application
+
+paths:
+  /api/v1/features:
+    get:
+      tags: [Consumer]
+      summary: List feature flags for the authenticated application
+      operationId: listFeatures
+      security:
+        - AppToken: []
+      responses:
+        '200':
+          description: Feature flags for the application
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ConsumerFeatureFlag'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/v1/features/{key}:
+    get:
+      tags: [Consumer]
+      summary: Get a single feature flag by key
+      operationId: getFeature
+      security:
+        - AppToken: []
+      parameters:
+        - $ref: '#/components/parameters/FlagKey'
+      responses:
+        '200':
+          description: Feature flag
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConsumerFeatureFlag'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/admin/auth/login:
+    post:
+      tags: [Admin Auth]
+      summary: Authenticate admin and receive JWT
+      operationId: adminLogin
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+      responses:
+        '200':
+          description: JWT issued
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoginResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/admin/applications:
+    get:
+      tags: [Admin Applications]
+      summary: List all applications
+      operationId: listApplications
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Applications
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Application'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+    post:
+      tags: [Admin Applications]
+      summary: Create application
+      operationId: createApplication
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateApplicationRequest'
+      responses:
+        '201':
+          description: Application created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Application'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '409':
+          $ref: '#/components/responses/Conflict'
+
+  /api/admin/applications/{applicationId}:
+    get:
+      tags: [Admin Applications]
+      summary: Get application by ID
+      operationId: getApplication
+      security:
+        - BearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/ApplicationId'
+      responses:
+        '200':
+          description: Application
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Application'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    put:
+      tags: [Admin Applications]
+      summary: Update application display name
+      operationId: updateApplication
+      security:
+        - BearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/ApplicationId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateApplicationRequest'
+      responses:
+        '200':
+          description: Application updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Application'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    delete:
+      tags: [Admin Applications]
+      summary: Delete application and cascade related data
+      operationId: deleteApplication
+      security:
+        - BearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/ApplicationId'
+      responses:
+        '204':
+          description: Application deleted
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/admin/applications/{applicationId}/tokens:
+    get:
+      tags: [Admin Tokens]
+      summary: List API tokens (metadata only)
+      operationId: listTokens
+      security:
+        - BearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/ApplicationId'
+      responses:
+        '200':
+          description: Token metadata list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ApiTokenMetadata'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    post:
+      tags: [Admin Tokens]
+      summary: Generate a new API token
+      operationId: generateToken
+      security:
+        - BearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/ApplicationId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenerateTokenRequest'
+      responses:
+        '201':
+          description: Token created; plaintext shown once
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiTokenCreated'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/admin/applications/{applicationId}/tokens/{tokenId}/rotate:
+    post:
+      tags: [Admin Tokens]
+      summary: Rotate token (new token issued, old remains active until revoked)
+      operationId: rotateToken
+      security:
+        - BearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/ApplicationId'
+        - $ref: '#/components/parameters/TokenId'
+      responses:
+        '201':
+          description: New token created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiTokenCreated'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/admin/applications/{applicationId}/tokens/{tokenId}/revoke:
+    post:
+      tags: [Admin Tokens]
+      summary: Revoke an API token
+      operationId: revokeToken
+      security:
+        - BearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/ApplicationId'
+        - $ref: '#/components/parameters/TokenId'
+      responses:
+        '200':
+          description: Token revoked
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiTokenMetadata'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/admin/applications/{applicationId}/flags:
+    get:
+      tags: [Admin Feature Flags]
+      summary: List feature flags for application
+      operationId: listAdminFlags
+      security:
+        - BearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/ApplicationId'
+      responses:
+        '200':
+          description: Feature flags
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FeatureFlag'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    post:
+      tags: [Admin Feature Flags]
+      summary: Create feature flag
+      operationId: createFlag
+      security:
+        - BearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/ApplicationId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateFeatureFlagRequest'
+      responses:
+        '201':
+          description: Feature flag created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FeatureFlag'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/Conflict'
+
+  /api/admin/applications/{applicationId}/flags/{key}:
+    get:
+      tags: [Admin Feature Flags]
+      summary: Get feature flag by key
+      operationId: getAdminFlag
+      security:
+        - BearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/ApplicationId'
+        - $ref: '#/components/parameters/FlagKey'
+      responses:
+        '200':
+          description: Feature flag
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FeatureFlag'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    put:
+      tags: [Admin Feature Flags]
+      summary: Update feature flag
+      operationId: updateFlag
+      security:
+        - BearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/ApplicationId'
+        - $ref: '#/components/parameters/FlagKey'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateFeatureFlagRequest'
+      responses:
+        '200':
+          description: Feature flag updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FeatureFlag'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    delete:
+      tags: [Admin Feature Flags]
+      summary: Delete feature flag
+      operationId: deleteFlag
+      security:
+        - BearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/ApplicationId'
+        - $ref: '#/components/parameters/FlagKey'
+      responses:
+        '204':
+          description: Feature flag deleted
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    AppToken:
+      type: apiKey
+      in: header
+      name: X-App-Token
+      description: Requires X-App-Name header as well
+
+  parameters:
+    ApplicationId:
+      name: applicationId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    TokenId:
+      name: tokenId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    FlagKey:
+      name: key
+      in: path
+      required: true
+      schema:
+        type: string
+        pattern: '^[a-z][a-z0-9_-]*$'
+
+  schemas:
+    ErrorResponse:
+      type: object
+      required: [code, message]
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        details:
+          type: object
+          additionalProperties: true
+
+    LoginRequest:
+      type: object
+      required: [username, password]
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+          format: password
+
+    LoginResponse:
+      type: object
+      required: [token, expiresIn]
+      properties:
+        token:
+          type: string
+        expiresIn:
+          type: integer
+          description: Token lifetime in seconds
+
+    Application:
+      type: object
+      required: [id, name, displayName, createdAt, updatedAt]
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+          pattern: '^[a-z][a-z0-9-]*$'
+        displayName:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    CreateApplicationRequest:
+      type: object
+      required: [name, displayName]
+      properties:
+        name:
+          type: string
+          pattern: '^[a-z][a-z0-9-]*$'
+        displayName:
+          type: string
+          minLength: 1
+
+    UpdateApplicationRequest:
+      type: object
+      required: [displayName]
+      properties:
+        displayName:
+          type: string
+          minLength: 1
+
+    ApiTokenStatus:
+      type: string
+      enum: [ACTIVE, REVOKED]
+
+    ApiTokenMetadata:
+      type: object
+      required: [id, applicationId, tokenPrefix, status, createdAt]
+      properties:
+        id:
+          type: string
+          format: uuid
+        applicationId:
+          type: string
+          format: uuid
+        tokenPrefix:
+          type: string
+        status:
+          $ref: '#/components/schemas/ApiTokenStatus'
+        lastUsedAt:
+          type: string
+          format: date-time
+          nullable: true
+        expiresAt:
+          type: string
+          format: date-time
+          nullable: true
+        createdAt:
+          type: string
+          format: date-time
+        revokedAt:
+          type: string
+          format: date-time
+          nullable: true
+
+    ApiTokenCreated:
+      allOf:
+        - $ref: '#/components/schemas/ApiTokenMetadata'
+        - type: object
+          required: [plaintextToken]
+          properties:
+            plaintextToken:
+              type: string
+              description: Shown once; never stored
+
+    GenerateTokenRequest:
+      type: object
+      properties:
+        expiresAt:
+          type: string
+          format: date-time
+          nullable: true
+
+    FeatureFlag:
+      type: object
+      required: [id, applicationId, key, enabled, createdAt, updatedAt]
+      properties:
+        id:
+          type: string
+          format: uuid
+        applicationId:
+          type: string
+          format: uuid
+        key:
+          type: string
+          pattern: '^[a-z][a-z0-9_-]*$'
+        enabled:
+          type: boolean
+        description:
+          type: string
+          nullable: true
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    ConsumerFeatureFlag:
+      type: object
+      required: [key, enabled]
+      properties:
+        key:
+          type: string
+        enabled:
+          type: boolean
+        description:
+          type: string
+          nullable: true
+
+    CreateFeatureFlagRequest:
+      type: object
+      required: [key, enabled]
+      properties:
+        key:
+          type: string
+          pattern: '^[a-z][a-z0-9_-]*$'
+        enabled:
+          type: boolean
+        description:
+          type: string
+          nullable: true
+
+    UpdateFeatureFlagRequest:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+        description:
+          type: string
+          nullable: true
+
+  responses:
+    Unauthorized:
+      description: Authentication failed
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    BadRequest:
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    Conflict:
+      description: Resource conflict
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
