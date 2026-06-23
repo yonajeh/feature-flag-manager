@@ -1,50 +1,20 @@
 services:
-  db:
-    image: postgres:16-alpine
-    environment:
-      POSTGRES_DB: ${FF_DB_NAME:-feature_flags}
-      POSTGRES_USER: ${FF_DB_USER:-ffm}
-      POSTGRES_PASSWORD: ${FF_DB_PASSWORD:-ffm}
-    ports:
-      - "${FF_DB_PORT:-5432}:5432"
-    volumes:
-      - ffm_pg_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${FF_DB_USER:-ffm} -d ${FF_DB_NAME:-feature_flags}"]
-      interval: 5s
-      timeout: 5s
-      retries: 10
-
   app:
     build:
       context: ..
       dockerfile: docker/Dockerfile
-    depends_on:
-      db:
-        condition: service_healthy
     ports:
       - "${FF_APP_PORT:-8080}:8080"
+    volumes:
+      - ffm_data:/data
     environment:
       QUARKUS_PROFILE: prod
-      FF_DB_HOST: db
-      FF_DB_PORT: 5432
-      FF_DB_NAME: ${FF_DB_NAME:-feature_flags}
-      FF_DB_USER: ${FF_DB_USER:-ffm}
-      FF_DB_PASSWORD: ${FF_DB_PASSWORD:-ffm}
+      FF_DB_PATH: /data/ffm.db
       FF_ADMIN_USERNAME: ${FF_ADMIN_USERNAME:-admin}
       FF_ADMIN_PASSWORD: ${FF_ADMIN_PASSWORD:-admin}
       FF_TOKEN_PEPPER: ${FF_TOKEN_PEPPER:-change-me-in-production}
       FF_JWT_ISSUER: ${FF_JWT_ISSUER:-feature-flag-manager}
       FF_JWT_AUDIENCE: ${FF_JWT_AUDIENCE:-feature-flag-admin}
 
-  adminer:
-    image: adminer:4
-    depends_on:
-      - db
-    ports:
-      - "8081:8080"
-    profiles:
-      - tools
-
 volumes:
-  ffm_pg_data:
+  ffm_data:

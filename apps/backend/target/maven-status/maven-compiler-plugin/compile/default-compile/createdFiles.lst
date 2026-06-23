@@ -1,17 +1,20 @@
 com/featureflag/config/FfConfig$Admin.class
 com/featureflag/service/AdminAuthService.class
+com/featureflag/dto/ExportedApplication.class
 com/featureflag/FeatureFlagApplication.class
 com/featureflag/service/ApplicationService.class
 com/featureflag/dto/CreateFeatureFlagRequest.class
 com/featureflag/dto/LoginResponse.class
 com/featureflag/exception/NotFoundException.class
 com/featureflag/dto/ApplicationDto.class
+com/featureflag/dto/FullDataExportDto.class
 com/featureflag/domain/FeatureFlag.class
 com/featureflag/resource/AdminTokenResource.class
 com/featureflag/security/ConsumerAuthFilter.class
 com/featureflag/exception/GlobalExceptionMapper.class
 com/featureflag/config/FfConfig$Token.class
 com/featureflag/dto/FeatureFlagDto.class
+com/featureflag/service/ExportService.class
 com/featureflag/security/TokenCrypto.class
 com/featureflag/dto/ErrorResponse.class
 com/featureflag/dto/ConsumerFeatureFlagDto.class
@@ -25,6 +28,7 @@ com/featureflag/dto/LoginRequest.class
 com/featureflag/repository/ApiTokenRepository.class
 com/featureflag/domain/ApiToken.class
 com/featureflag/dto/ApiTokenCreatedDto.class
+com/featureflag/dto/ApplicationDataExportDto.class
 com/featureflag/domain/ApiTokenStatus.class
 com/featureflag/resource/AdminFeatureFlagResource.class
 com/featureflag/resource/AdminApplicationResource.class
@@ -33,6 +37,7 @@ com/featureflag/mapper/DtoMapper.class
 com/featureflag/exception/UnauthorizedException.class
 com/featureflag/resource/SpaResource.class
 com/featureflag/repository/ApplicationRepository.class
+com/featureflag/resource/AdminExportResource.class
 com/featureflag/dto/UpdateFeatureFlagRequest.class
 com/featureflag/dto/UpdateApplicationRequest.class
 com/featureflag/dto/CreateApplicationRequest.class

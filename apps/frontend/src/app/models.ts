@@ -35,3 +35,23 @@ export interface LoginResponse {
   token: string;
   expiresIn: number;
 }
+
+export interface ExportedApplication {
+  application: Application;
+  featureFlags: FeatureFlag[];
+  tokens: ApiTokenMetadata[];
+}
+
+export interface ApplicationDataExport {
+  exportedAt: string;
+  version: number;
+  application: Application;
+  featureFlags: FeatureFlag[];
+  tokens: ApiTokenMetadata[];
+}
+
+export interface FullDataExport {
+  exportedAt: string;
+  version: number;
+  applications: ExportedApplication[];
+}

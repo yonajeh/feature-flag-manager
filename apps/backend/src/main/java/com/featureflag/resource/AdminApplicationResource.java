@@ -2,6 +2,7 @@ package com.featureflag.resource;
 
 import com.featureflag.dto.*;
 import com.featureflag.service.ApplicationService;
+import com.featureflag.service.ExportService;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
@@ -19,6 +20,9 @@ public class AdminApplicationResource {
 
     @Inject
     ApplicationService applicationService;
+
+    @Inject
+    ExportService exportService;
 
     @GET
     public List<ApplicationDto> list() {
@@ -50,5 +54,11 @@ public class AdminApplicationResource {
     public Response delete(@PathParam("applicationId") UUID applicationId) {
         applicationService.delete(applicationId);
         return Response.noContent().build();
+    }
+
+    @GET
+    @Path("/{applicationId}/export")
+    public ApplicationDataExportDto export(@PathParam("applicationId") UUID applicationId) {
+        return exportService.exportApplication(applicationId);
     }
 }

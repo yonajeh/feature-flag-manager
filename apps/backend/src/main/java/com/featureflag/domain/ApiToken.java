@@ -10,10 +10,9 @@ import java.util.UUID;
 public class ApiToken extends PanacheEntityBase {
 
     @Id
-    @Column(columnDefinition = "uuid")
     public UUID id;
 
-    @Column(name = "application_id", nullable = false, columnDefinition = "uuid")
+    @Column(name = "application_id", nullable = false)
     public UUID applicationId;
 
     @Column(name = "token_hash", nullable = false, length = 64)

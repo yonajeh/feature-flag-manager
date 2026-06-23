@@ -1,13 +1,12 @@
 package com.featureflag.testsupport;
 
-import org.testcontainers.containers.PostgreSQLContainer;
-
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -15,16 +14,12 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Starts PostgreSQL and the packaged Quarkus application for integration tests.
+ * Starts the packaged Quarkus application with an embedded SQLite database for integration tests.
  */
 public final class QuarkusJarTestResource {
 
-    private static final PostgreSQLContainer<?> POSTGRES = new PostgreSQLContainer<>("postgres:16-alpine")
-            .withDatabaseName("feature_flags_test")
-            .withUsername("test")
-            .withPassword("test");
-
     private static Process appProcess;
+    private static Path dbFile;
     private static int httpPort = findFreePort();
     private static boolean started;
 
@@ -34,7 +29,7 @@ public final class QuarkusJarTestResource {
         if (started) {
             return;
         }
-        POSTGRES.start();
+        dbFile = Files.createTempFile("ffm-it-", ".db");
 
         Path jar = Path.of("target/quarkus-app/quarkus-run.jar").toAbsolutePath();
         if (!jar.toFile().exists()) {
@@ -50,9 +45,7 @@ public final class QuarkusJarTestResource {
         command.add(Path.of(javaHome, "bin", "java").toString());
         command.add("-Dquarkus.profile=prod");
         command.add("-Dquarkus.http.port=" + httpPort);
-        command.add("-Dquarkus.datasource.jdbc.url=" + POSTGRES.getJdbcUrl());
-        command.add("-Dquarkus.datasource.username=" + POSTGRES.getUsername());
-        command.add("-Dquarkus.datasource.password=" + POSTGRES.getPassword());
+        command.add("-Dquarkus.datasource.jdbc.url=jdbc:sqlite:" + dbFile.toAbsolutePath());
         command.add("-Dff.admin.username=admin");
         command.add("-Dff.admin.password=admin");
         command.add("-Dff.token.pepper=test-pepper");
@@ -78,8 +71,12 @@ public final class QuarkusJarTestResource {
                 appProcess.destroyForcibly();
             }
         }
-        if (POSTGRES.isRunning()) {
-            POSTGRES.stop();
+        if (dbFile != null) {
+            try {
+                Files.deleteIfExists(dbFile);
+            } catch (IOException ignored) {
+                // temp file cleanup best-effort
+            }
         }
         started = false;
     }

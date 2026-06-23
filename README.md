@@ -40,11 +40,7 @@ make docker-build   # single-container image
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `FF_DB_HOST` | PostgreSQL host | `localhost` (prod profile) |
-| `FF_DB_PORT` | PostgreSQL port | `5432` |
-| `FF_DB_NAME` | Database name | `feature_flags` |
-| `FF_DB_USER` | Database user | `ffm` |
-| `FF_DB_PASSWORD` | Database password | `ffm` |
+| `FF_DB_PATH` | SQLite database file path | `/data/ffm.db` (prod), `./data/dev.db` (dev) |
 | `FF_ADMIN_USERNAME` | Super-admin username | `admin` |
 | `FF_ADMIN_PASSWORD` | Super-admin password | `admin` |
 | `FF_TOKEN_PEPPER` | Server-side pepper for API token hashing | (required in prod) |

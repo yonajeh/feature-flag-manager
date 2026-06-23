@@ -5,6 +5,5 @@
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/test/java/com/featureflag/service/ApplicationServiceTest.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/test/java/com/featureflag/service/FeatureFlagServiceTest.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/test/java/com/featureflag/service/TokenServiceTest.java
-/Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/test/java/com/featureflag/testsupport/PostgresTestResource.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/test/java/com/featureflag/testsupport/QuarkusJarTestResource.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/test/java/com/featureflag/testsupport/TestApiClient.java

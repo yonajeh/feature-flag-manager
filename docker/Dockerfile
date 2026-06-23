@@ -23,8 +23,11 @@ RUN mvn -f apps/backend/pom.xml -B package -DskipTests
 FROM eclipse-temurin:21-jre-alpine AS runtime
 WORKDIR /app
 RUN addgroup -S ffm && adduser -S ffm -G ffm
+RUN mkdir -p /data && chown ffm:ffm /data
 COPY --from=app /build/apps/backend/target/quarkus-app/ ./
 USER ffm
 EXPOSE 8080
 ENV QUARKUS_PROFILE=prod
+ENV FF_DB_PATH=/data/ffm.db
+VOLUME /data
 ENTRYPOINT ["java", "-jar", "quarkus-run.jar"]

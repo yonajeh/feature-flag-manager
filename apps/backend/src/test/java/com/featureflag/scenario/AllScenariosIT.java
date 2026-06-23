@@ -279,4 +279,47 @@ class AllScenariosIT {
         given().get("/q/openapi").then().statusCode(200)
                 .body(containsString("Feature Flag Manager API"));
     }
+
+    // --- E8: Data export ---
+    @Test
+    @Order(80)
+    void e8_exportApplication_includesFlagsAndTokenMetadata() {
+        TestApiClient.authorized(adminToken)
+                .get("/api/admin/applications/" + e1AppId + "/export")
+                .then()
+                .statusCode(200)
+                .body("version", equalTo(1))
+                .body("application.name", equalTo(e1AppName))
+                .body("featureFlags.size()", equalTo(2))
+                .body("tokens.size()", equalTo(1))
+                .body("tokens[0].plaintextToken", nullValue());
+    }
+
+    @Test
+    @Order(81)
+    void e8_exportAll_includesApplications() {
+        TestApiClient.authorized(adminToken)
+                .get("/api/admin/export")
+                .then()
+                .statusCode(200)
+                .body("version", equalTo(1))
+                .body("applications.size()", greaterThanOrEqualTo(1));
+    }
+
+    @Test
+    @Order(82)
+    void e8_exportApplication_notFound_returns404() {
+        UUID missingId = UUID.randomUUID();
+        TestApiClient.authorized(adminToken)
+                .get("/api/admin/applications/" + missingId + "/export")
+                .then()
+                .statusCode(404)
+                .body("code", equalTo("NOT_FOUND"));
+    }
+
+    @Test
+    @Order(83)
+    void e8_exportUnauthenticated_returns401() {
+        given().get("/api/admin/export").then().statusCode(401);
+    }
 }

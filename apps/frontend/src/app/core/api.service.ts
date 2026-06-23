@@ -1,6 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Application, ApiTokenCreated, ApiTokenMetadata, FeatureFlag } from '../models';
+import {
+  Application,
+  ApiTokenCreated,
+  ApiTokenMetadata,
+  ApplicationDataExport,
+  FeatureFlag,
+  FullDataExport,
+} from '../models';
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
@@ -61,5 +68,13 @@ export class ApiService {
       `/api/admin/applications/${applicationId}/tokens/${tokenId}/revoke`,
       {}
     );
+  }
+
+  exportApplication(applicationId: string) {
+    return this.http.get<ApplicationDataExport>(`/api/admin/applications/${applicationId}/export`);
+  }
+
+  exportAll() {
+    return this.http.get<FullDataExport>('/api/admin/export');
   }
 }

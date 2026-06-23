@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ApiService } from '../../core/api.service';
 import { AuthService } from '../../core/auth.service';
+import { downloadJson } from '../../core/download-json';
 import { ApiTokenMetadata, FeatureFlag } from '../../models';
 import { TokenRevealDialogComponent } from '../../components/token-reveal-dialog/token-reveal-dialog.component';
 
@@ -18,7 +19,10 @@ import { TokenRevealDialogComponent } from '../../components/token-reveal-dialog
           <a routerLink="/applications" class="text-sm text-indigo-600 hover:underline">← Applications</a>
           <h1 class="text-2xl font-semibold mt-1">Application</h1>
         </div>
-        <button class="text-sm text-slate-600" (click)="auth.logout()">Logout</button>
+        <div class="flex items-center gap-3">
+          <button class="text-sm text-indigo-600 hover:text-indigo-800" (click)="exportData()">Export JSON</button>
+          <button class="text-sm text-slate-600" (click)="auth.logout()">Logout</button>
+        </div>
       </header>
 
       <section class="bg-white rounded-lg shadow p-4 space-y-3">
@@ -107,6 +111,7 @@ import { TokenRevealDialogComponent } from '../../components/token-reveal-dialog
 })
 export class ApplicationDetailComponent implements OnInit {
   applicationId = '';
+  applicationName = '';
   flags: FeatureFlag[] = [];
   tokens: ApiTokenMetadata[] = [];
   flagKey = '';
@@ -127,6 +132,16 @@ export class ApplicationDetailComponent implements OnInit {
   refresh(): void {
     this.api.listFlags(this.applicationId).subscribe((flags) => (this.flags = flags));
     this.api.listTokens(this.applicationId).subscribe((tokens) => (this.tokens = tokens));
+    this.api.listApplications().subscribe((apps) => {
+      const app = apps.find((candidate) => candidate.id === this.applicationId);
+      this.applicationName = app?.name ?? this.applicationId;
+    });
+  }
+
+  exportData(): void {
+    this.api.exportApplication(this.applicationId).subscribe((data) => {
+      downloadJson(`${this.applicationName}-export.json`, data);
+    });
   }
 
   addFlag(): void {

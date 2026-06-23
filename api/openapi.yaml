@@ -20,6 +20,8 @@ tags:
     description: API token management
   - name: Admin Feature Flags
     description: Feature flag CRUD per application
+  - name: Admin Export
+    description: Data export for backup and migration
 
 paths:
   /api/v1/features:
@@ -127,6 +129,23 @@ paths:
         '409':
           $ref: '#/components/responses/Conflict'
 
+  /api/admin/export:
+    get:
+      tags: [Admin Export]
+      summary: Export all applications with flags and token metadata
+      operationId: exportAllData
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Full data export
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FullDataExport'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
   /api/admin/applications/{applicationId}:
     get:
       tags: [Admin Applications]
@@ -185,6 +204,27 @@ paths:
       responses:
         '204':
           description: Application deleted
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/admin/applications/{applicationId}/export:
+    get:
+      tags: [Admin Export]
+      summary: Export a single application with flags and token metadata
+      operationId: exportApplicationData
+      security:
+        - BearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/ApplicationId'
+      responses:
+        '200':
+          description: Application data export
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApplicationDataExport'
         '401':
           $ref: '#/components/responses/Unauthorized'
         '404':
@@ -615,6 +655,57 @@ components:
         description:
           type: string
           nullable: true
+
+    ExportedApplication:
+      type: object
+      required: [application, featureFlags, tokens]
+      properties:
+        application:
+          $ref: '#/components/schemas/Application'
+        featureFlags:
+          type: array
+          items:
+            $ref: '#/components/schemas/FeatureFlag'
+        tokens:
+          type: array
+          items:
+            $ref: '#/components/schemas/ApiTokenMetadata'
+
+    ApplicationDataExport:
+      type: object
+      required: [exportedAt, version, application, featureFlags, tokens]
+      properties:
+        exportedAt:
+          type: string
+          format: date-time
+        version:
+          type: integer
+          description: Export format version
+        application:
+          $ref: '#/components/schemas/Application'
+        featureFlags:
+          type: array
+          items:
+            $ref: '#/components/schemas/FeatureFlag'
+        tokens:
+          type: array
+          items:
+            $ref: '#/components/schemas/ApiTokenMetadata'
+
+    FullDataExport:
+      type: object
+      required: [exportedAt, version, applications]
+      properties:
+        exportedAt:
+          type: string
+          format: date-time
+        version:
+          type: integer
+          description: Export format version
+        applications:
+          type: array
+          items:
+            $ref: '#/components/schemas/ExportedApplication'
 
   responses:
     Unauthorized:

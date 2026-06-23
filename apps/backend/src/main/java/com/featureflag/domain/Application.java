@@ -10,7 +10,6 @@ import java.util.UUID;
 public class Application extends PanacheEntityBase {
 
     @Id
-    @Column(columnDefinition = "uuid")
     public UUID id;
 
     @Column(nullable = false, unique = true, length = 64, updatable = false)

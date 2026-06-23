@@ -5,9 +5,9 @@
 - Java 21 (`JAVA_HOME` must point to JDK 21)
 - Maven 3.9+
 - Node.js 20+ and npm
-- Docker (for integration tests, image build, and compose)
+- Docker (for image build and compose)
 
-## Local backend (Dev Services PostgreSQL)
+## Local backend (embedded SQLite)
 
 ```bash
 export JAVA_HOME=$(/usr/libexec/java_home -v 21)
@@ -16,6 +16,8 @@ mvn quarkus:dev
 ```
 
 API: http://localhost:8080 — Swagger UI: http://localhost:8080/q/swagger-ui
+
+Data is stored in `./data/dev.db` by default (override with `FF_DB_PATH`).
 
 Default super-admin credentials: `admin` / `admin` (override with `FF_ADMIN_*`).
 
@@ -38,18 +40,18 @@ cp -R dist/frontend/* ../backend/src/main/resources/META-INF/resources/
 ## Tests
 
 ```bash
-make backend-test    # unit + integration (Testcontainers)
+make backend-test    # unit + integration (embedded SQLite)
 make frontend-test   # Karma component tests
 make test            # both
 ```
 
-Integration tests launch the packaged JAR against a Testcontainers PostgreSQL instance.
+Integration tests launch the packaged JAR against a temporary SQLite file — no external database required.
 
 ## Docker
 
 ```bash
 make docker-build
-make compose-up      # app + postgres (+ adminer with --profile tools)
+make compose-up      # single app container with persisted /data volume
 make compose-down
 ```
 

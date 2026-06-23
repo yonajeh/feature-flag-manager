@@ -16,6 +16,7 @@
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <quarkus.platform.version>3.17.5</quarkus.platform.version>
+        <quarkus-jdbc-sqlite4j.version>0.0.8</quarkus-jdbc-sqlite4j.version>
         <surefire-plugin.version>3.5.2</surefire-plugin.version>
         <jacoco.version>0.8.12</jacoco.version>
         <byte-buddy.version>1.17.5</byte-buddy.version>
@@ -52,8 +53,9 @@
             <artifactId>quarkus-hibernate-orm-panache</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-jdbc-postgresql</artifactId>
+            <groupId>io.quarkiverse.jdbc</groupId>
+            <artifactId>quarkus-jdbc-sqlite4j</artifactId>
+            <version>${quarkus-jdbc-sqlite4j.version}</version>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
@@ -106,11 +108,6 @@
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-junit5-mockito</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.testcontainers</groupId>
-            <artifactId>postgresql</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>

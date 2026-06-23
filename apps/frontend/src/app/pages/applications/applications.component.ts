@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { ApiService } from '../../core/api.service';
 import { AuthService } from '../../core/auth.service';
+import { downloadJson } from '../../core/download-json';
 import { Application } from '../../models';
 
 @Component({
@@ -14,7 +15,16 @@ import { Application } from '../../models';
     <div class="max-w-5xl mx-auto p-6 space-y-6">
       <header class="flex items-center justify-between">
         <h1 class="text-2xl font-semibold">Applications</h1>
-        <button class="text-sm text-slate-600 hover:text-slate-900" (click)="auth.logout()">Logout</button>
+        <div class="flex items-center gap-3">
+          <button
+            class="text-sm text-indigo-600 hover:text-indigo-800"
+            (click)="exportAll()"
+            [disabled]="exporting"
+          >
+            {{ exporting ? 'Exporting…' : 'Export all' }}
+          </button>
+          <button class="text-sm text-slate-600 hover:text-slate-900" (click)="auth.logout()">Logout</button>
+        </div>
       </header>
 
       <section class="bg-white rounded-lg shadow p-4 space-y-3">
@@ -42,6 +52,7 @@ import { Application } from '../../models';
               <td class="p-3">{{ app.displayName }}</td>
               <td class="p-3 text-right space-x-2">
                 <a class="text-indigo-600 hover:underline" [routerLink]="['/applications', app.id]">Manage</a>
+                <button class="text-indigo-600 hover:underline" (click)="exportApp(app)">Export</button>
                 <button class="text-red-600 hover:underline" (click)="remove(app)">Delete</button>
               </td>
             </tr>
@@ -56,6 +67,7 @@ export class ApplicationsComponent implements OnInit {
   newName = '';
   newDisplayName = '';
   error = '';
+  exporting = false;
 
   constructor(public auth: AuthService, private api: ApiService, private router: Router) {}
 
@@ -84,5 +96,24 @@ export class ApplicationsComponent implements OnInit {
       return;
     }
     this.api.deleteApplication(app.id).subscribe(() => this.load());
+  }
+
+  exportApp(app: Application): void {
+    this.api.exportApplication(app.id).subscribe((data) => {
+      downloadJson(`${app.name}-export.json`, data);
+    });
+  }
+
+  exportAll(): void {
+    this.exporting = true;
+    this.api.exportAll().subscribe({
+      next: (data) => {
+        downloadJson('ffm-export.json', data);
+        this.exporting = false;
+      },
+      error: () => {
+        this.exporting = false;
+      },
+    });
   }
 }

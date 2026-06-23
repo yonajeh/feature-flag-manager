@@ -6,12 +6,15 @@
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/domain/FeatureFlag.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/dto/ApiTokenCreatedDto.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/dto/ApiTokenMetadataDto.java
+/Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/dto/ApplicationDataExportDto.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/dto/ApplicationDto.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/dto/ConsumerFeatureFlagDto.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/dto/CreateApplicationRequest.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/dto/CreateFeatureFlagRequest.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/dto/ErrorResponse.java
+/Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/dto/ExportedApplication.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/dto/FeatureFlagDto.java
+/Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/dto/FullDataExportDto.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/dto/GenerateTokenRequest.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/dto/LoginRequest.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/dto/LoginResponse.java
@@ -27,6 +30,7 @@
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/repository/FeatureFlagRepository.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/resource/AdminApplicationResource.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/resource/AdminAuthResource.java
+/Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/resource/AdminExportResource.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/resource/AdminFeatureFlagResource.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/resource/AdminTokenResource.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/resource/ConsumerFeatureResource.java
@@ -37,5 +41,6 @@
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/security/TokenCrypto.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/service/AdminAuthService.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/service/ApplicationService.java
+/Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/service/ExportService.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/service/FeatureFlagService.java
 /Users/najeh-mac/dev/feature-flag-manager/apps/backend/src/main/java/com/featureflag/service/TokenService.java

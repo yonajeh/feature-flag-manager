@@ -1,4 +1,3 @@
-com/featureflag/testsupport/PostgresTestResource.class
 com/featureflag/service/AdminAuthServiceTest.class
 com/featureflag/service/FeatureFlagServiceTest.class
 com/featureflag/scenario/AllScenariosIT.class

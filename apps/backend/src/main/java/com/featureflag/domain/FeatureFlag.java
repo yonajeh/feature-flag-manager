@@ -10,10 +10,9 @@ import java.util.UUID;
 public class FeatureFlag extends PanacheEntityBase {
 
     @Id
-    @Column(columnDefinition = "uuid")
     public UUID id;
 
-    @Column(name = "application_id", nullable = false, columnDefinition = "uuid")
+    @Column(name = "application_id", nullable = false)
     public UUID applicationId;
 
     @Column(name = "flag_key", nullable = false, length = 128, updatable = false)
