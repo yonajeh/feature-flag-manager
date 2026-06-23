@@ -6,6 +6,7 @@ import { ApiService } from '../../core/api.service';
 import { AuthService } from '../../core/auth.service';
 import { downloadJson } from '../../core/download-json';
 import { Application } from '../../models';
+import { slugFromText } from '../../core/slug-from-text';
 
 @Component({
   selector: 'app-applications',
@@ -30,8 +31,18 @@ import { Application } from '../../models';
       <section class="bg-white rounded-lg shadow p-4 space-y-3">
         <h2 class="font-medium">Register application</h2>
         <div class="grid md:grid-cols-3 gap-3">
-          <input class="border rounded px-3 py-2" placeholder="slug-name" [(ngModel)]="newName" />
-          <input class="border rounded px-3 py-2" placeholder="Display name" [(ngModel)]="newDisplayName" />
+          <input
+            class="border rounded px-3 py-2"
+            placeholder="Display name"
+            [ngModel]="newDisplayName"
+            (ngModelChange)="onDisplayNameChange($event)"
+          />
+          <input
+            class="border rounded px-3 py-2"
+            placeholder="slug-name"
+            [ngModel]="newName"
+            (ngModelChange)="onNameChange($event)"
+          />
           <button class="bg-indigo-600 text-white rounded px-4 py-2" (click)="create()">Create</button>
         </div>
         <p *ngIf="error" class="text-sm text-red-600">{{ error }}</p>
@@ -51,7 +62,7 @@ import { Application } from '../../models';
               <td class="p-3 font-mono">{{ app.name }}</td>
               <td class="p-3">{{ app.displayName }}</td>
               <td class="p-3 text-right space-x-2">
-                <a class="text-indigo-600 hover:underline" [routerLink]="['/applications', app.id]">Manage</a>
+                <a class="text-indigo-600 hover:underline" [routerLink]="['/applications', app.id, 'features']">Manage</a>
                 <button class="text-indigo-600 hover:underline" (click)="exportApp(app)">Export</button>
                 <button class="text-red-600 hover:underline" (click)="remove(app)">Delete</button>
               </td>
@@ -66,6 +77,7 @@ export class ApplicationsComponent implements OnInit {
   applications: Application[] = [];
   newName = '';
   newDisplayName = '';
+  nameManuallyEdited = false;
   error = '';
   exporting = false;
 
@@ -79,12 +91,25 @@ export class ApplicationsComponent implements OnInit {
     this.api.listApplications().subscribe((apps) => (this.applications = apps));
   }
 
+  onDisplayNameChange(value: string): void {
+    this.newDisplayName = value;
+    if (!this.nameManuallyEdited) {
+      this.newName = slugFromText(value);
+    }
+  }
+
+  onNameChange(value: string): void {
+    this.newName = value;
+    this.nameManuallyEdited = true;
+  }
+
   create(): void {
     this.error = '';
     this.api.createApplication(this.newName, this.newDisplayName).subscribe({
       next: () => {
         this.newName = '';
         this.newDisplayName = '';
+        this.nameManuallyEdited = false;
         this.load();
       },
       error: () => (this.error = 'Could not create application (name may already exist)'),

@@ -615,6 +615,8 @@ components:
         description:
           type: string
           nullable: true
+        metadata:
+          $ref: '#/components/schemas/FlagMetadata'
         createdAt:
           type: string
           format: date-time
@@ -633,6 +635,8 @@ components:
         description:
           type: string
           nullable: true
+        metadata:
+          $ref: '#/components/schemas/FlagMetadata'
 
     CreateFeatureFlagRequest:
       type: object
@@ -646,6 +650,8 @@ components:
         description:
           type: string
           nullable: true
+        metadata:
+          $ref: '#/components/schemas/FlagMetadata'
 
     UpdateFeatureFlagRequest:
       type: object
@@ -655,6 +661,14 @@ components:
         description:
           type: string
           nullable: true
+        metadata:
+          $ref: '#/components/schemas/FlagMetadata'
+
+    FlagMetadata:
+      type: object
+      additionalProperties: true
+      nullable: true
+      description: Arbitrary key-value metadata for the feature flag
 
     ExportedApplication:
       type: object

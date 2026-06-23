@@ -70,7 +70,7 @@ class FeatureFlagServiceTest {
         when(featureFlagRepository.findByApplicationIdAndKey(appId, "dark-mode")).thenReturn(Optional.of(flag));
 
         assertThrows(ConflictException.class, () ->
-                featureFlagService.create(appId, new CreateFeatureFlagRequest("dark-mode", false, null)));
+                featureFlagService.create(appId, new CreateFeatureFlagRequest("dark-mode", false, null, null)));
     }
 
     @Test
@@ -86,10 +86,43 @@ class FeatureFlagServiceTest {
         }).when(featureFlagRepository).persist(any(FeatureFlag.class));
 
         FeatureFlagDto created = featureFlagService.create(appId,
-                new CreateFeatureFlagRequest("new-flag", true, "desc"));
+                new CreateFeatureFlagRequest("new-flag", true, "desc", null));
 
         assertEquals("new-flag", created.key());
         assertTrue(created.enabled());
+    }
+
+    @Test
+    void create_withMetadata() {
+        Application app = new Application();
+        app.id = appId;
+        when(applicationRepository.findByIdOptional(appId)).thenReturn(Optional.of(app));
+        when(featureFlagRepository.findByApplicationIdAndKey(appId, "meta-flag")).thenReturn(Optional.empty());
+        doAnswer(inv -> {
+            FeatureFlag f = inv.getArgument(0);
+            f.id = UUID.randomUUID();
+            return null;
+        }).when(featureFlagRepository).persist(any(FeatureFlag.class));
+
+        var metadata = java.util.Map.<String, Object>of("owner", "platform", "tier", 1);
+        FeatureFlagDto created = featureFlagService.create(appId,
+                new CreateFeatureFlagRequest("meta-flag", true, null, metadata));
+
+        assertEquals(metadata, created.metadata());
+    }
+
+    @Test
+    void update_changesMetadata() {
+        Application app = new Application();
+        app.id = appId;
+        when(applicationRepository.findByIdOptional(appId)).thenReturn(Optional.of(app));
+        when(featureFlagRepository.findByApplicationIdAndKey(appId, "dark-mode")).thenReturn(Optional.of(flag));
+
+        var metadata = java.util.Map.<String, Object>of("env", "prod");
+        FeatureFlagDto updated = featureFlagService.update(appId, "dark-mode",
+                new UpdateFeatureFlagRequest(null, null, metadata));
+
+        assertEquals(metadata, updated.metadata());
     }
 
     @Test
@@ -100,7 +133,7 @@ class FeatureFlagServiceTest {
         when(featureFlagRepository.findByApplicationIdAndKey(appId, "dark-mode")).thenReturn(Optional.of(flag));
 
         FeatureFlagDto updated = featureFlagService.update(appId, "dark-mode",
-                new UpdateFeatureFlagRequest(false, null));
+                new UpdateFeatureFlagRequest(false, null, null));
 
         assertFalse(updated.enabled());
     }

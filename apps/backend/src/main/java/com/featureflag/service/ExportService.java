@@ -16,7 +16,7 @@ import java.util.UUID;
 @ApplicationScoped
 public class ExportService {
 
-    private static final int EXPORT_VERSION = 1;
+    private static final int EXPORT_VERSION = 2;
 
     @Inject
     ApplicationRepository applicationRepository;

@@ -60,6 +60,7 @@ public class FeatureFlagService {
         flag.key = request.key();
         flag.enabled = request.enabled();
         flag.description = request.description();
+        flag.metadata = request.metadata();
         featureFlagRepository.persist(flag);
         return DtoMapper.toDto(flag);
     }
@@ -72,6 +73,9 @@ public class FeatureFlagService {
         }
         if (request.description() != null) {
             flag.description = request.description();
+        }
+        if (request.metadata() != null) {
+            flag.metadata = request.metadata();
         }
         featureFlagRepository.persist(flag);
         return DtoMapper.toDto(flag);

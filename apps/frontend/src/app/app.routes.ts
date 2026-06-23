@@ -11,6 +11,11 @@ export const routes: Routes = [
   },
   {
     path: 'applications/:id',
+    pathMatch: 'full',
+    redirectTo: 'applications/:id/features',
+  },
+  {
+    path: 'applications/:id/:tab',
     canActivate: [authGuard],
     loadComponent: () =>
       import('./pages/application-detail/application-detail.component').then(

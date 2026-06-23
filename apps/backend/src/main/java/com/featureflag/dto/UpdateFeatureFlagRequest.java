@@ -1,3 +1,5 @@
 package com.featureflag.dto;
 
-public record UpdateFeatureFlagRequest(Boolean enabled, String description) {}
+import java.util.Map;
+
+public record UpdateFeatureFlagRequest(Boolean enabled, String description, Map<String, Object> metadata) {}

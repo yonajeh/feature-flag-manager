@@ -3,7 +3,10 @@ package com.featureflag.domain;
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.*;
 import java.time.Instant;
+import java.util.Map;
 import java.util.UUID;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 @Entity
 @Table(name = "feature_flags")
@@ -23,6 +26,10 @@ public class FeatureFlag extends PanacheEntityBase {
 
     @Column
     public String description;
+
+    @JdbcTypeCode(SqlTypes.JSON)
+    @Column(columnDefinition = "TEXT")
+    public Map<String, Object> metadata;
 
     @Column(name = "created_at", nullable = false)
     public Instant createdAt;

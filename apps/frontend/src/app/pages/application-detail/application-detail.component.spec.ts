@@ -4,7 +4,7 @@ import { of } from 'rxjs';
 import { ApplicationDetailComponent } from './application-detail.component';
 import { ApiService } from '../../core/api.service';
 import { AuthService } from '../../core/auth.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, convertToParamMap } from '@angular/router';
 
 describe('ApplicationDetailComponent', () => {
   const api = jasmine.createSpyObj<ApiService>('ApiService', [
@@ -39,6 +39,7 @@ describe('ApplicationDetailComponent', () => {
         updatedAt: '',
       })
     );
+    api.listApplications = jasmine.createSpy('listApplications').and.returnValue(of([]));
 
     TestBed.configureTestingModule({
       imports: [ApplicationDetailComponent],
@@ -48,7 +49,12 @@ describe('ApplicationDetailComponent', () => {
         { provide: AuthService, useValue: { logout: () => undefined } },
         {
           provide: ActivatedRoute,
-          useValue: { snapshot: { paramMap: { get: () => 'app' } } },
+          useValue: {
+            snapshot: {
+              paramMap: convertToParamMap({ id: 'app', tab: 'features' }),
+            },
+            paramMap: of(convertToParamMap({ id: 'app', tab: 'features' })),
+          },
         },
       ],
     });
@@ -59,6 +65,10 @@ describe('ApplicationDetailComponent', () => {
     fixture.detectChanges();
     expect(fixture.nativeElement.textContent).toContain('instant-booking');
     fixture.componentInstance.toggle(fixture.componentInstance.flags[0]);
-    expect(api.updateFlag).toHaveBeenCalledWith('app', 'instant-booking', false, undefined);
+    expect(api.updateFlag).toHaveBeenCalledWith('app', 'instant-booking', {
+      enabled: false,
+      description: undefined,
+      metadata: undefined,
+    });
   });
 });

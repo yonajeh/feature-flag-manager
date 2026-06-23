@@ -29,19 +29,27 @@ export class ApiService {
     return this.http.get<FeatureFlag[]>(`/api/admin/applications/${applicationId}/flags`);
   }
 
-  createFlag(applicationId: string, key: string, enabled: boolean, description?: string) {
+  createFlag(
+    applicationId: string,
+    key: string,
+    enabled: boolean,
+    description?: string,
+    metadata?: Record<string, unknown>
+  ) {
     return this.http.post<FeatureFlag>(`/api/admin/applications/${applicationId}/flags`, {
       key,
       enabled,
       description,
+      metadata,
     });
   }
 
-  updateFlag(applicationId: string, key: string, enabled: boolean, description?: string) {
-    return this.http.put<FeatureFlag>(`/api/admin/applications/${applicationId}/flags/${key}`, {
-      enabled,
-      description,
-    });
+  updateFlag(
+    applicationId: string,
+    key: string,
+    body: { enabled?: boolean; description?: string; metadata?: Record<string, unknown> }
+  ) {
+    return this.http.put<FeatureFlag>(`/api/admin/applications/${applicationId}/flags/${key}`, body);
   }
 
   deleteFlag(applicationId: string, key: string) {

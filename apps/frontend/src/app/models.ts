@@ -12,6 +12,7 @@ export interface FeatureFlag {
   key: string;
   enabled: boolean;
   description?: string;
+  metadata?: Record<string, unknown>;
   createdAt: string;
   updatedAt: string;
 }

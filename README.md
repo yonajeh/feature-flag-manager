@@ -22,12 +22,15 @@ api/openapi.yaml          # API-first contract
 apps/backend/             # Quarkus (Java 21)
 apps/frontend/            # Angular + Tailwind admin UI
 docker/                   # Dockerfile + docker-compose.yml
+dockerhub/                # Docker Hub overview (end-developer docs)
 docs/                     # Developer guides
 ```
 
 ## Development
 
 See [docs/README.md](docs/README.md) for local dev, testing, and build details.
+
+**Docker Hub consumers:** [dockerhub/README.md](dockerhub/README.md) — pull, run, env vars, and consumer API integration.
 
 **Requires Java 21** — set `JAVA_HOME` before running Maven (`make backend-test` does this on macOS).
 

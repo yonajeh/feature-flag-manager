@@ -55,6 +55,8 @@ make compose-up      # single app container with persisted /data volume
 make compose-down
 ```
 
+Published images: see [dockerhub/README.md](../dockerhub/README.md) for the Docker Hub overview (quick start, env vars, consumer API, and production notes). That file is synced to Docker Hub on each image publish.
+
 ## API contract
 
 Source of truth: `api/openapi.yaml`. The served document is at `/q/openapi`.

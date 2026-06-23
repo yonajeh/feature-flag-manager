@@ -76,7 +76,7 @@ class AllScenariosIT {
                 .post("/api/admin/applications/" + e1AppId + "/tokens")
                 .then().statusCode(201).extract().jsonPath().getString("plaintextToken");
         TestApiClient.authorized(adminToken).contentType(ContentType.JSON)
-                .body("{\"key\":\"feature-a\",\"enabled\":true,\"description\":\"A\"}")
+                .body("{\"key\":\"feature-a\",\"enabled\":true,\"description\":\"A\",\"metadata\":{\"owner\":\"team-a\"}}")
                 .post("/api/admin/applications/" + e1AppId + "/flags").then().statusCode(201);
         TestApiClient.authorized(adminToken).contentType(ContentType.JSON)
                 .body("{\"key\":\"feature-b\",\"enabled\":false}")
@@ -96,7 +96,10 @@ class AllScenariosIT {
     void e1_getFeatureByKey() {
         given().header("X-App-Name", e1AppName).header("X-App-Token", e1Token)
                 .get("/api/v1/features/feature-a")
-                .then().statusCode(200).body("key", equalTo("feature-a")).body("enabled", equalTo(true));
+                .then().statusCode(200)
+                .body("key", equalTo("feature-a"))
+                .body("enabled", equalTo(true))
+                .body("metadata.owner", equalTo("team-a"));
     }
 
     // --- E2: Auth rejection ---
@@ -288,9 +291,10 @@ class AllScenariosIT {
                 .get("/api/admin/applications/" + e1AppId + "/export")
                 .then()
                 .statusCode(200)
-                .body("version", equalTo(1))
+                .body("version", equalTo(2))
                 .body("application.name", equalTo(e1AppName))
                 .body("featureFlags.size()", equalTo(2))
+                .body("featureFlags.find { it.key == 'feature-a' }.metadata.owner", equalTo("team-a"))
                 .body("tokens.size()", equalTo(1))
                 .body("tokens[0].plaintextToken", nullValue());
     }
@@ -302,7 +306,7 @@ class AllScenariosIT {
                 .get("/api/admin/export")
                 .then()
                 .statusCode(200)
-                .body("version", equalTo(1))
+                .body("version", equalTo(2))
                 .body("applications.size()", greaterThanOrEqualTo(1));
     }
 

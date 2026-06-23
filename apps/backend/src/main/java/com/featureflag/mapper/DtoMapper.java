@@ -45,11 +45,12 @@ public final class DtoMapper {
                 flag.key,
                 flag.enabled,
                 flag.description,
+                flag.metadata,
                 flag.createdAt,
                 flag.updatedAt);
     }
 
     public static ConsumerFeatureFlagDto toConsumerDto(FeatureFlag flag) {
-        return new ConsumerFeatureFlagDto(flag.key, flag.enabled, flag.description);
+        return new ConsumerFeatureFlagDto(flag.key, flag.enabled, flag.description, flag.metadata);
     }
 }

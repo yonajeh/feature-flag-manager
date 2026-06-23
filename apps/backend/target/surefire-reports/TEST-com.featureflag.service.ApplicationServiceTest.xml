@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.featureflag.service.ApplicationServiceTest" time="0.13" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.featureflag.service.ApplicationServiceTest" time="0.126" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,12 +12,13 @@
     <property name="os.name" value="Mac OS X"/>
     <property name="java.vm.specification.version" value="25"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="user.country" value="001"/>
+    <property name="user.country" value="BE"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/najeh-mac/dev/feature-flag-manager/apps/backend/target/surefire/surefirebooter-20260623020916481_3.jar /Users/najeh-mac/dev/feature-flag-manager/apps/backend/target/surefire 2026-06-23T02-09-16_424-jvmRun1 surefire-20260623020916481_1tmp surefire_0-20260623020916481_2tmp"/>
+    <property name="sun.java.command" value="/Users/najeh-mac/dev/feature-flag-manager/apps/backend/target/surefire/surefirebooter-20260623172308861_3.jar /Users/najeh-mac/dev/feature-flag-manager/apps/backend/target/surefire 2026-06-23T17-23-08_810-jvmRun1 surefire-20260623172308861_1tmp surefire_0-20260623172308861_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="maven.home" value="/opt/homebrew/Cellar/maven/3.9.15/libexec"/>
+    <property name="test" value="!JavaVersionTest"/>
     <property name="surefire.test.class.path" value="/Users/najeh-mac/dev/feature-flag-manager/apps/backend/target/test-classes:/Users/najeh-mac/dev/feature-flag-manager/apps/backend/target/classes:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-rest/3.17.5/quarkus-rest-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-rest-common/3.17.5/quarkus-rest-common-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/resteasy/reactive/resteasy-reactive-common/3.17.5/resteasy-reactive-common-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/resteasy/reactive/resteasy-reactive-common-types/3.17.5/resteasy-reactive-common-types-3.17.5.jar:/Users/najeh-mac/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/najeh-mac/.m2/repository/io/smallrye/common/smallrye-common-annotation/2.9.0/smallrye-common-annotation-2.9.0.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-vertx/3.17.5/quarkus-vertx-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-netty/3.17.5/quarkus-netty-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/netty/netty-codec/4.1.115.Final/netty-codec-4.1.115.Final.jar:/Users/najeh-mac/.m2/repository/io/netty/netty-codec-haproxy/4.1.115.Final/netty-codec-haproxy-4.1.115.Final.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-vertx-latebound-mdc-provider/3.17.5/quarkus-vertx-latebound-mdc-provider-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/smallrye/smallrye-fault-tolerance-vertx/6.6.3/smallrye-fault-tolerance-vertx-6.6.3.jar:/Users/najeh-mac/.m2/repository/io/quarkus/resteasy/reactive/resteasy-reactive-vertx/3.17.5/resteasy-reactive-vertx-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/vertx/vertx-web/4.5.11/vertx-web-4.5.11.jar:/Users/najeh-mac/.m2/repository/io/vertx/vertx-web-common/4.5.11/vertx-web-common-4.5.11.jar:/Users/najeh-mac/.m2/repository/io/vertx/vertx-auth-common/4.5.11/vertx-auth-common-4.5.11.jar:/Users/najeh-mac/.m2/repository/io/vertx/vertx-bridge-common/4.5.11/vertx-bridge-common-4.5.11.jar:/Users/najeh-mac/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-core/3.16.0/smallrye-mutiny-vertx-core-3.16.0.jar:/Users/najeh-mac/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-runtime/3.16.0/smallrye-mutiny-vertx-runtime-3.16.0.jar:/Users/najeh-mac/.m2/repository/io/smallrye/reactive/vertx-mutiny-generator/3.16.0/vertx-mutiny-generator-3.16.0.jar:/Users/najeh-mac/.m2/repository/io/vertx/vertx-codegen/4.5.11/vertx-codegen-4.5.11.jar:/Users/najeh-mac/.m2/repository/io/quarkus/resteasy/reactive/resteasy-reactive/3.17.5/resteasy-reactive-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/vertx/utils/quarkus-vertx-utils/3.17.5/quarkus-vertx-utils-3.17.5.jar:/Users/najeh-mac/.m2/repository/org/jboss/logging/commons-logging-jboss-logging/1.0.0.Final/commons-logging-jboss-logging-1.0.0.Final.jar:/Users/najeh-mac/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/najeh-mac/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/najeh-mac/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-vertx-http/3.17.5/quarkus-vertx-http-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-tls-registry/3.17.5/quarkus-tls-registry-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-credentials/3.17.5/quarkus-credentials-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/smallrye/common/smallrye-common-vertx-context/2.9.0/smallrye-common-vertx-context-2.9.0.jar:/Users/najeh-mac/.m2/repository/io/smallrye/common/smallrye-common-constraint/2.9.0/smallrye-common-constraint-2.9.0.jar:/Users/najeh-mac/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-web/3.16.0/smallrye-mutiny-vertx-web-3.16.0.jar:/Users/najeh-mac/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-web-common/3.16.0/smallrye-mutiny-vertx-web-common-3.16.0.jar:/Users/najeh-mac/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-auth-common/3.16.0/smallrye-mutiny-vertx-auth-common-3.16.0.jar:/Users/najeh-mac/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-bridge-common/3.16.0/smallrye-mutiny-vertx-bridge-common-3.16.0.jar:/Users/najeh-mac/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-uri-template/3.16.0/smallrye-mutiny-vertx-uri-template-3.16.0.jar:/Users/najeh-mac/.m2/repository/io/vertx/vertx-uri-template/4.5.11/vertx-uri-template-4.5.11.jar:/Users/najeh-mac/.m2/repository/io/github/crac/org-crac/0.1.3/org-crac-0.1.3.jar:/Users/najeh-mac/.m2/repository/com/aayushatharva/brotli4j/brotli4j/1.16.0/brotli4j-1.16.0.jar:/Users/najeh-mac/.m2/repository/com/aayushatharva/brotli4j/service/1.16.0/service-1.16.0.jar:/Users/najeh-mac/.m2/repository/com/aayushatharva/brotli4j/native-osx-aarch64/1.16.0/native-osx-aarch64-1.16.0.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-jsonp/3.17.5/quarkus-jsonp-3.17.5.jar:/Users/najeh-mac/.m2/repository/org/eclipse/parsson/parsson/1.1.7/parsson-1.1.7.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-virtual-threads/3.17.5/quarkus-virtual-threads-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/vertx/vertx-core/4.5.11/vertx-core-4.5.11.jar:/Users/najeh-mac/.m2/repository/io/netty/netty-common/4.1.115.Final/netty-common-4.1.115.Final.jar:/Users/najeh-mac/.m2/repository/io/netty/netty-buffer/4.1.115.Final/netty-buffer-4.1.115.Final.jar:/Users/najeh-mac/.m2/repository/io/netty/netty-transport/4.1.115.Final/netty-transport-4.1.115.Final.jar:/Users/najeh-mac/.m2/repository/io/netty/netty-handler/4.1.115.Final/netty-handler-4.1.115.Final.jar:/Users/najeh-mac/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.115.Final/netty-transport-native-unix-common-4.1.115.Final.jar:/Users/najeh-mac/.m2/repository/io/netty/netty-handler-proxy/4.1.115.Final/netty-handler-proxy-4.1.115.Final.jar:/Users/najeh-mac/.m2/repository/io/netty/netty-codec-socks/4.1.115.Final/netty-codec-socks-4.1.115.Final.jar:/Users/najeh-mac/.m2/repository/io/netty/netty-codec-http/4.1.115.Final/netty-codec-http-4.1.115.Final.jar:/Users/najeh-mac/.m2/repository/io/netty/netty-codec-http2/4.1.115.Final/netty-codec-http2-4.1.115.Final.jar:/Users/najeh-mac/.m2/repository/io/netty/netty-resolver/4.1.115.Final/netty-resolver-4.1.115.Final.jar:/Users/najeh-mac/.m2/repository/io/netty/netty-resolver-dns/4.1.115.Final/netty-resolver-dns-4.1.115.Final.jar:/Users/najeh-mac/.m2/repository/io/netty/netty-codec-dns/4.1.115.Final/netty-codec-dns-4.1.115.Final.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-rest-jackson/3.17.5/quarkus-rest-jackson-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-rest-jackson-common/3.17.5/quarkus-rest-jackson-common-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/resteasy/reactive/resteasy-reactive-jackson/3.17.5/resteasy-reactive-jackson-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-jackson/3.17.5/quarkus-jackson-3.17.5.jar:/Users/najeh-mac/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.18.2/jackson-datatype-jdk8-2.18.2.jar:/Users/najeh-mac/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.18.2/jackson-module-parameter-names-2.18.2.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-hibernate-orm-panache/3.17.5/quarkus-hibernate-orm-panache-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-hibernate-orm/3.17.5/quarkus-hibernate-orm-3.17.5.jar:/Users/najeh-mac/.m2/repository/org/hibernate/orm/hibernate-core/6.6.3.Final/hibernate-core-6.6.3.Final.jar:/Users/najeh-mac/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/najeh-mac/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/Users/najeh-mac/.m2/repository/org/hibernate/orm/hibernate-graalvm/6.6.3.Final/hibernate-graalvm-6.6.3.Final.jar:/Users/najeh-mac/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/najeh-mac/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/najeh-mac/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/najeh-mac/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/najeh-mac/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/najeh-mac/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/najeh-mac/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/najeh-mac/.m2/repository/org/hibernate/quarkus-local-cache/0.3.0/quarkus-local-cache-0.3.0.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-caffeine/3.17.5/quarkus-caffeine-3.17.5.jar:/Users/najeh-mac/.m2/repository/com/github/ben-manes/caffeine/caffeine/3.1.8/caffeine-3.1.8.jar:/Users/najeh-mac/.m2/repository/com/google/errorprone/error_prone_annotations/2.35.1/error_prone_annotations-2.35.1.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-hibernate-orm-panache-common/3.17.5/quarkus-hibernate-orm-panache-common-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-panache-hibernate-common/3.17.5/quarkus-panache-hibernate-common-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-panache-common/3.17.5/quarkus-panache-common-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkiverse/jdbc/quarkus-jdbc-sqlite4j/0.0.8/quarkus-jdbc-sqlite4j-0.0.8.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-agroal/3.17.5/quarkus-agroal-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-datasource/3.17.5/quarkus-datasource-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/agroal/agroal-api/2.5/agroal-api-2.5.jar:/Users/najeh-mac/.m2/repository/io/agroal/agroal-narayana/2.5/agroal-narayana-2.5.jar:/Users/najeh-mac/.m2/repository/org/jboss/jboss-transaction-spi/8.0.0.Final/jboss-transaction-spi-8.0.0.Final.jar:/Users/najeh-mac/.m2/repository/io/agroal/agroal-pool/2.5/agroal-pool-2.5.jar:/Users/najeh-mac/.m2/repository/io/roastedroot/sqlite4j/3.50.4.1/sqlite4j-3.50.4.1.jar:/Users/najeh-mac/.m2/repository/com/dylibso/chicory/wasm/1.5.3/wasm-1.5.3.jar:/Users/najeh-mac/.m2/repository/com/dylibso/chicory/runtime/1.5.3/runtime-1.5.3.jar:/Users/najeh-mac/.m2/repository/com/dylibso/chicory/wasi/1.5.3/wasi-1.5.3.jar:/Users/najeh-mac/.m2/repository/com/dylibso/chicory/log/1.5.3/log-1.5.3.jar:/Users/najeh-mac/.m2/repository/com/dylibso/chicory/annotations/1.5.3/annotations-1.5.3.jar:/Users/najeh-mac/.m2/repository/io/roastedroot/zerofs/0.1.0/zerofs-0.1.0.jar:/Users/najeh-mac/.m2/repository/org/hibernate/orm/hibernate-community-dialects/6.6.3.Final/hibernate-community-dialects-6.6.3.Final.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-flyway/3.17.5/quarkus-flyway-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-core/3.17.5/quarkus-core-3.17.5.jar:/Users/najeh-mac/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/najeh-mac/.m2/repository/io/smallrye/common/smallrye-common-os/2.9.0/smallrye-common-os-2.9.0.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-ide-launcher/3.17.5/quarkus-ide-launcher-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-development-mode-spi/3.17.5/quarkus-development-mode-spi-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/smallrye/config/smallrye-config/3.10.2/smallrye-config-3.10.2.jar:/Users/najeh-mac/.m2/repository/io/smallrye/config/smallrye-config-core/3.10.2/smallrye-config-core-3.10.2.jar:/Users/najeh-mac/.m2/repository/io/smallrye/config/smallrye-config-common/3.10.2/smallrye-config-common-3.10.2.jar:/Users/najeh-mac/.m2/repository/org/jboss/logmanager/jboss-logmanager/3.1.1.Final/jboss-logmanager-3.1.1.Final.jar:/Users/najeh-mac/.m2/repository/io/smallrye/common/smallrye-common-cpu/2.9.0/smallrye-common-cpu-2.9.0.jar:/Users/najeh-mac/.m2/repository/io/smallrye/common/smallrye-common-expression/2.9.0/smallrye-common-expression-2.9.0.jar:/Users/najeh-mac/.m2/repository/io/smallrye/common/smallrye-common-net/2.9.0/smallrye-common-net-2.9.0.jar:/Users/najeh-mac/.m2/repository/io/smallrye/common/smallrye-common-ref/2.9.0/smallrye-common-ref-2.9.0.jar:/Users/najeh-mac/.m2/repository/org/jboss/logging/jboss-logging-annotations/3.0.2.Final/jboss-logging-annotations-3.0.2.Final.jar:/Users/najeh-mac/.m2/repository/org/jboss/threads/jboss-threads/3.8.0.Final/jboss-threads-3.8.0.Final.jar:/Users/najeh-mac/.m2/repository/io/smallrye/common/smallrye-common-function/2.9.0/smallrye-common-function-2.9.0.jar:/Users/najeh-mac/.m2/repository/org/slf4j/slf4j-api/2.0.6/slf4j-api-2.0.6.jar:/Users/najeh-mac/.m2/repository/org/jboss/slf4j/slf4j-jboss-logmanager/2.0.0.Final/slf4j-jboss-logmanager-2.0.0.Final.jar:/Users/najeh-mac/.m2/repository/org/wildfly/common/wildfly-common/1.7.0.Final/wildfly-common-1.7.0.Final.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-bootstrap-runner/3.17.5/quarkus-bootstrap-runner-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-fs-util/0.0.10/quarkus-fs-util-0.0.10.jar:/Users/najeh-mac/.m2/repository/org/flywaydb/flyway-core/10.21.0/flyway-core-10.21.0.jar:/Users/najeh-mac/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.18.2/jackson-dataformat-toml-2.18.2.jar:/Users/najeh-mac/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.18.2/jackson-datatype-jsr310-2.18.2.jar:/Users/najeh-mac/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.2/jackson-annotations-2.18.2.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-narayana-jta/3.17.5/quarkus-narayana-jta-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-transaction-annotations/3.17.5/quarkus-transaction-annotations-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/smallrye/smallrye-context-propagation-jta/2.1.2/smallrye-context-propagation-jta-2.1.2.jar:/Users/najeh-mac/.m2/repository/io/smallrye/reactive/smallrye-reactive-converter-api/3.0.1/smallrye-reactive-converter-api-3.0.1.jar:/Users/najeh-mac/.m2/repository/io/smallrye/reactive/smallrye-reactive-converter-mutiny/3.0.1/smallrye-reactive-converter-mutiny-3.0.1.jar:/Users/najeh-mac/.m2/repository/io/smallrye/reactive/mutiny-zero-flow-adapters/1.1.0/mutiny-zero-flow-adapters-1.1.0.jar:/Users/najeh-mac/.m2/repository/org/jboss/narayana/jta/narayana-jta/7.1.0.Final/narayana-jta-7.1.0.Final.jar:/Users/najeh-mac/.m2/repository/jakarta/resource/jakarta.resource-api/2.1.0/jakarta.resource-api-2.1.0.jar:/Users/najeh-mac/.m2/repository/org/jboss/invocation/jboss-invocation/2.0.0.Final/jboss-invocation-2.0.0.Final.jar:/Users/najeh-mac/.m2/repository/org/eclipse/microprofile/reactive-streams-operators/microprofile-reactive-streams-operators-api/3.0.1/microprofile-reactive-streams-operators-api-3.0.1.jar:/Users/najeh-mac/.m2/repository/org/jboss/narayana/jts/narayana-jts-integration/7.1.0.Final/narayana-jts-integration-7.1.0.Final.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-datasource-common/3.17.5/quarkus-datasource-common-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-smallrye-openapi/3.17.5/quarkus-smallrye-openapi-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/smallrye/smallrye-open-api-core/4.0.5/smallrye-open-api-core-4.0.5.jar:/Users/najeh-mac/.m2/repository/org/eclipse/microprofile/openapi/microprofile-openapi-api/4.0.2/microprofile-openapi-api-4.0.2.jar:/Users/najeh-mac/.m2/repository/org/eclipse/microprofile/config/microprofile-config-api/3.1/microprofile-config-api-3.1.jar:/Users/najeh-mac/.m2/repository/io/smallrye/smallrye-open-api-model/4.0.5/smallrye-open-api-model-4.0.5.jar:/Users/najeh-mac/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.2/jackson-core-2.18.2.jar:/Users/najeh-mac/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.2/jackson-databind-2.18.2.jar:/Users/najeh-mac/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.18.2/jackson-dataformat-yaml-2.18.2.jar:/Users/najeh-mac/.m2/repository/org/yaml/snakeyaml/2.3/snakeyaml-2.3.jar:/Users/najeh-mac/.m2/repository/io/smallrye/jandex/3.2.3/jandex-3.2.3.jar:/Users/najeh-mac/.m2/repository/io/smallrye/common/smallrye-common-classloader/2.9.0/smallrye-common-classloader-2.9.0.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-swagger-ui/3.17.5/quarkus-swagger-ui-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-smallrye-jwt/3.17.5/quarkus-smallrye-jwt-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/smallrye/smallrye-jwt/4.6.1/smallrye-jwt-4.6.1.jar:/Users/najeh-mac/.m2/repository/org/eclipse/microprofile/jwt/microprofile-jwt-auth-api/2.1/microprofile-jwt-auth-api-2.1.jar:/Users/najeh-mac/.m2/repository/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.jar:/Users/najeh-mac/.m2/repository/io/smallrye/smallrye-jwt-common/4.6.1/smallrye-jwt-common-4.6.1.jar:/Users/najeh-mac/.m2/repository/jakarta/annotation/jakarta.annotation-api/3.0.0/jakarta.annotation-api-3.0.0.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-smallrye-jwt-build/3.17.5/quarkus-smallrye-jwt-build-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/smallrye/smallrye-jwt-build/4.6.1/smallrye-jwt-build-4.6.1.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-smallrye-health/3.17.5/quarkus-smallrye-health-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/smallrye/smallrye-health/4.1.0/smallrye-health-4.1.0.jar:/Users/najeh-mac/.m2/repository/org/eclipse/microprofile/health/microprofile-health-api/4.0.1/microprofile-health-api-4.0.1.jar:/Users/najeh-mac/.m2/repository/io/smallrye/smallrye-health-api/4.1.0/smallrye-health-api-4.1.0.jar:/Users/najeh-mac/.m2/repository/jakarta/json/jakarta.json-api/2.1.3/jakarta.json-api-2.1.3.jar:/Users/najeh-mac/.m2/repository/io/smallrye/smallrye-health-provided-checks/4.1.0/smallrye-health-provided-checks-4.1.0.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-hibernate-validator/3.17.5/quarkus-hibernate-validator-3.17.5.jar:/Users/najeh-mac/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.2.Final/hibernate-validator-8.0.2.Final.jar:/Users/najeh-mac/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/najeh-mac/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/Users/najeh-mac/.m2/repository/org/glassfish/expressly/expressly/5.0.0/expressly-5.0.0.jar:/Users/najeh-mac/.m2/repository/jakarta/el/jakarta.el-api/5.0.1/jakarta.el-api-5.0.1.jar:/Users/najeh-mac/.m2/repository/io/smallrye/config/smallrye-config-validator/3.10.2/smallrye-config-validator-3.10.2.jar:/Users/najeh-mac/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/3.1.0/jakarta.ws.rs-api-3.1.0.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-security/3.17.5/quarkus-security-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-security-runtime-spi/3.17.5/quarkus-security-runtime-spi-3.17.5.jar:/Users/najeh-mac/.m2/repository/jakarta/interceptor/jakarta.interceptor-api/2.2.0/jakarta.interceptor-api-2.2.0.jar:/Users/najeh-mac/.m2/repository/io/quarkus/security/quarkus-security/2.2.0/quarkus-security-2.2.0.jar:/Users/najeh-mac/.m2/repository/io/smallrye/reactive/mutiny/2.6.2/mutiny-2.6.2.jar:/Users/najeh-mac/.m2/repository/org/jctools/jctools-core/4.0.5/jctools-core-4.0.5.jar:/Users/najeh-mac/.m2/repository/jakarta/enterprise/jakarta.enterprise.cdi-api/4.1.0/jakarta.enterprise.cdi-api-4.1.0.jar:/Users/najeh-mac/.m2/repository/jakarta/enterprise/jakarta.enterprise.lang-model/4.1.0/jakarta.enterprise.lang-model-4.1.0.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-arc/3.17.5/quarkus-arc-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/arc/arc/3.17.5/arc-3.17.5.jar:/Users/najeh-mac/.m2/repository/org/eclipse/microprofile/context-propagation/microprofile-context-propagation-api/1.3/microprofile-context-propagation-api-1.3.jar:/Users/najeh-mac/.m2/repository/net/bytebuddy/byte-buddy/1.17.5/byte-buddy-1.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-junit5/3.17.5/quarkus-junit5-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-bootstrap-core/3.17.5/quarkus-bootstrap-core-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-classloader-commons/3.17.5/quarkus-classloader-commons-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-bootstrap-app-model/3.17.5/quarkus-bootstrap-app-model-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/smallrye/common/smallrye-common-io/2.9.0/smallrye-common-io-2.9.0.jar:/Users/najeh-mac/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.inject/0.9.0.M3/org.eclipse.sisu.inject-0.9.0.M3.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-test-common/3.17.5/quarkus-test-common-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-core-deployment/3.17.5/quarkus-core-deployment-3.17.5.jar:/Users/najeh-mac/.m2/repository/org/aesh/readline/2.6/readline-2.6.jar:/Users/najeh-mac/.m2/repository/org/fusesource/jansi/jansi/2.4.0/jansi-2.4.0.jar:/Users/najeh-mac/.m2/repository/org/aesh/aesh/2.8.2/aesh-2.8.2.jar:/Users/najeh-mac/.m2/repository/io/quarkus/gizmo/gizmo/1.8.0/gizmo-1.8.0.jar:/Users/najeh-mac/.m2/repository/org/ow2/asm/asm-util/9.7.1/asm-util-9.7.1.jar:/Users/najeh-mac/.m2/repository/org/ow2/asm/asm-analysis/9.7.1/asm-analysis-9.7.1.jar:/Users/najeh-mac/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/Users/najeh-mac/.m2/repository/org/ow2/asm/asm-commons/9.7.1/asm-commons-9.7.1.jar:/Users/najeh-mac/.m2/repository/org/ow2/asm/asm-tree/9.7.1/asm-tree-9.7.1.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-hibernate-validator-spi/3.17.5/quarkus-hibernate-validator-spi-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-class-change-agent/3.17.5/quarkus-class-change-agent-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-devtools-utilities/3.17.5/quarkus-devtools-utilities-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-builder/3.17.5/quarkus-builder-3.17.5.jar:/Users/najeh-mac/.m2/repository/org/graalvm/sdk/nativeimage/23.1.2/nativeimage-23.1.2.jar:/Users/najeh-mac/.m2/repository/org/graalvm/sdk/word/23.1.2/word-23.1.2.jar:/Users/najeh-mac/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.5/junit-platform-launcher-1.10.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-bootstrap-maven-resolver/3.17.5/quarkus-bootstrap-maven-resolver-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/smallrye/beanbag/smallrye-beanbag-maven/1.5.2/smallrye-beanbag-maven-1.5.2.jar:/Users/najeh-mac/.m2/repository/io/smallrye/beanbag/smallrye-beanbag-sisu/1.5.2/smallrye-beanbag-sisu-1.5.2.jar:/Users/najeh-mac/.m2/repository/io/smallrye/beanbag/smallrye-beanbag/1.5.2/smallrye-beanbag-1.5.2.jar:/Users/najeh-mac/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/maven-artifact/3.9.9/maven-artifact-3.9.9.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/maven-builder-support/3.9.9/maven-builder-support-3.9.9.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/maven-model/3.9.9/maven-model-3.9.9.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/maven-model-builder/3.9.9/maven-model-builder-3.9.9.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/maven-repository-metadata/3.9.9/maven-repository-metadata-3.9.9.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/maven-settings/3.9.9/maven-settings-3.9.9.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/resolver/maven-resolver-api/1.9.22/maven-resolver-api-1.9.22.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/resolver/maven-resolver-impl/1.9.22/maven-resolver-impl-1.9.22.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/resolver/maven-resolver-named-locks/1.9.22/maven-resolver-named-locks-1.9.22.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/resolver/maven-resolver-spi/1.9.22/maven-resolver-spi-1.9.22.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/resolver/maven-resolver-util/1.9.22/maven-resolver-util-1.9.22.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/resolver/maven-resolver-transport-http/1.9.20/maven-resolver-transport-http-1.9.20.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/wagon/wagon-provider-api/3.5.3/wagon-provider-api-3.5.3.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/wagon/wagon-http-shared/3.5.3/wagon-http-shared-3.5.3.jar:/Users/najeh-mac/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.jar:/Users/najeh-mac/.m2/repository/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.jar:/Users/najeh-mac/.m2/repository/org/codehaus/plexus/plexus-xml/4.0.1/plexus-xml-4.0.1.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/maven-xml-impl/4.0.0-alpha-5/maven-xml-impl-4.0.0-alpha-5.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/maven-api-xml/4.0.0-alpha-5/maven-api-xml-4.0.0-alpha-5.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/maven-api-meta/4.0.0-alpha-5/maven-api-meta-4.0.0-alpha-5.jar:/Users/najeh-mac/.m2/repository/org/codehaus/plexus/plexus-cipher/2.0/plexus-cipher-2.0.jar:/Users/najeh-mac/.m2/repository/org/codehaus/plexus/plexus-sec-dispatcher/2.0/plexus-sec-dispatcher-2.0.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/maven-embedder/3.9.9/maven-embedder-3.9.9.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/maven-core/3.9.9/maven-core-3.9.9.jar:/Users/najeh-mac/.m2/repository/org/codehaus/plexus/plexus-component-annotations/2.1.0/plexus-component-annotations-2.1.0.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/maven-plugin-api/3.9.9/maven-plugin-api-3.9.9.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.jar:/Users/najeh-mac/.m2/repository/com/google/inject/guice/5.1.0/guice-5.1.0.jar:/Users/najeh-mac/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/najeh-mac/.m2/repository/com/google/guava/guava/33.3.1-jre/guava-33.3.1-jre.jar:/Users/najeh-mac/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/najeh-mac/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/Users/najeh-mac/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.6.0/plexus-classworlds-2.6.0.jar:/Users/najeh-mac/.m2/repository/commons-cli/commons-cli/1.8.0/commons-cli-1.8.0.jar:/Users/najeh-mac/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M3/org.eclipse.sisu.plexus-0.9.0.M3.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/maven-settings-builder/3.9.9/maven-settings-builder-3.9.9.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/maven-resolver-provider/3.9.9/maven-resolver-provider-3.9.9.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/resolver/maven-resolver-connector-basic/1.9.22/maven-resolver-connector-basic-1.9.22.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/resolver/maven-resolver-transport-wagon/1.9.22/maven-resolver-transport-wagon-1.9.22.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/wagon/wagon-http/3.5.3/wagon-http-3.5.3.jar:/Users/najeh-mac/.m2/repository/org/apache/maven/wagon/wagon-file/3.5.3/wagon-file-3.5.3.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-bootstrap-gradle-resolver/3.17.5/quarkus-bootstrap-gradle-resolver-3.17.5.jar:/Users/najeh-mac/.m2/repository/commons-io/commons-io/2.17.0/commons-io-2.17.0.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-junit5-properties/3.17.5/quarkus-junit5-properties-3.17.5.jar:/Users/najeh-mac/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.5/junit-jupiter-5.10.5.jar:/Users/najeh-mac/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.5/junit-jupiter-api-5.10.5.jar:/Users/najeh-mac/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/najeh-mac/.m2/repository/org/junit/platform/junit-platform-commons/1.10.5/junit-platform-commons-1.10.5.jar:/Users/najeh-mac/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/najeh-mac/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.5/junit-jupiter-params-5.10.5.jar:/Users/najeh-mac/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.5/junit-jupiter-engine-5.10.5.jar:/Users/najeh-mac/.m2/repository/org/junit/platform/junit-platform-engine/1.10.5/junit-platform-engine-1.10.5.jar:/Users/najeh-mac/.m2/repository/org/jboss/marshalling/jboss-marshalling/2.2.1.Final/jboss-marshalling-2.2.1.Final.jar:/Users/najeh-mac/.m2/repository/io/rest-assured/rest-assured/5.5.0/rest-assured-5.5.0.jar:/Users/najeh-mac/.m2/repository/org/apache/groovy/groovy/4.0.22/groovy-4.0.22.jar:/Users/najeh-mac/.m2/repository/org/apache/groovy/groovy-xml/4.0.22/groovy-xml-4.0.22.jar:/Users/najeh-mac/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar:/Users/najeh-mac/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/Users/najeh-mac/.m2/repository/commons-codec/commons-codec/1.17.1/commons-codec-1.17.1.jar:/Users/najeh-mac/.m2/repository/org/apache/httpcomponents/httpmime/4.5.14/httpmime-4.5.14.jar:/Users/najeh-mac/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/najeh-mac/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/najeh-mac/.m2/repository/io/rest-assured/json-path/5.5.0/json-path-5.5.0.jar:/Users/najeh-mac/.m2/repository/org/apache/groovy/groovy-json/4.0.22/groovy-json-4.0.22.jar:/Users/najeh-mac/.m2/repository/io/rest-assured/rest-assured-common/5.5.0/rest-assured-common-5.5.0.jar:/Users/najeh-mac/.m2/repository/io/rest-assured/xml-path/5.5.0/xml-path-5.5.0.jar:/Users/najeh-mac/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-junit5-mockito/3.17.5/quarkus-junit5-mockito-3.17.5.jar:/Users/najeh-mac/.m2/repository/org/mockito/mockito-junit-jupiter/5.14.2/mockito-junit-jupiter-5.14.2.jar:/Users/najeh-mac/.m2/repository/org/mockito/mockito-core/5.14.2/mockito-core-5.14.2.jar:/Users/najeh-mac/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.4/byte-buddy-agent-1.15.4.jar:/Users/najeh-mac/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-junit5-mockito-config/3.17.5/quarkus-junit5-mockito-config-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-arc-deployment/3.17.5/quarkus-arc-deployment-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-smallrye-context-propagation-spi/3.17.5/quarkus-smallrye-context-propagation-spi-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-vertx-http-dev-ui-spi/3.17.5/quarkus-vertx-http-dev-ui-spi-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/arc/arc-processor/3.17.5/arc-processor-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-arc-test-supplement/3.17.5/quarkus-arc-test-supplement-3.17.5.jar:/Users/najeh-mac/.m2/repository/org/mockito/mockito-subclass/5.14.2/mockito-subclass-5.14.2.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-mutiny/3.17.5/quarkus-mutiny-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-smallrye-context-propagation/3.17.5/quarkus-smallrye-context-propagation-3.17.5.jar:/Users/najeh-mac/.m2/repository/io/smallrye/smallrye-context-propagation/2.1.2/smallrye-context-propagation-2.1.2.jar:/Users/najeh-mac/.m2/repository/io/smallrye/smallrye-context-propagation-api/2.1.2/smallrye-context-propagation-api-2.1.2.jar:/Users/najeh-mac/.m2/repository/io/smallrye/smallrye-context-propagation-storage/2.1.2/smallrye-context-propagation-storage-2.1.2.jar:/Users/najeh-mac/.m2/repository/io/smallrye/reactive/mutiny-smallrye-context-propagation/2.6.2/mutiny-smallrye-context-propagation-2.6.2.jar:/Users/najeh-mac/.m2/repository/io/quarkus/quarkus-test-security/3.17.5/quarkus-test-security-3.17.5.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/najeh-mac"/>
@@ -32,7 +33,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/najeh-mac/dev/feature-flag-manager/apps/backend/target/surefire/surefirebooter-20260623020916481_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/najeh-mac/dev/feature-flag-manager/apps/backend/target/surefire/surefirebooter-20260623172308861_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="25.0.2"/>
@@ -51,6 +52,7 @@
     <property name="user.dir" value="/Users/najeh-mac/dev/feature-flag-manager/apps/backend"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="failIfNoTests" value="false"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.util.logging.manager" value="org.jboss.logmanager.LogManager"/>
     <property name="java.library.path" value="/Users/najeh-mac/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
@@ -64,8 +66,8 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="update_displayName" classname="com.featureflag.service.ApplicationServiceTest" time="0.122">
-    <system-err><![CDATA[java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4 with JaCoCo 0.8.12.202403310830/dbfb6f2.
+  <testcase name="update_displayName" classname="com.featureflag.service.ApplicationServiceTest" time="0.118">
+    <system-err><![CDATA[java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -161,7 +163,7 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4 with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -174,7 +176,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$HXcvuaCe with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$jptSuLCH with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -270,7 +272,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$HXcvuaCe with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$jptSuLCH with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -283,7 +285,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$OvdO74uD with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$I1nVFApF with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -379,7 +381,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$OvdO74uD with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$I1nVFApF with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -392,7 +394,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$YJQrjYRN with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$8ZGYx7IY with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -488,7 +490,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$YJQrjYRN with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$8ZGYx7IY with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -501,7 +503,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$1588jWUx with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$RoNNYGUd with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -597,7 +599,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$1588jWUx with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$RoNNYGUd with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -610,7 +612,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$Dr5dipvZ with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$iDdJyqSi with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -706,7 +708,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$Dr5dipvZ with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$iDdJyqSi with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -719,7 +721,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$OFtLUuCe with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$ht444Tbt with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -815,7 +817,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$OFtLUuCe with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$ht444Tbt with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -828,7 +830,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$QKaTy7mS with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$YQDiQQ4B with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -924,7 +926,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$QKaTy7mS with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$YQDiQQ4B with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -937,7 +939,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$bIDkbMey with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$ppzCso9M with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -1033,7 +1035,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$bIDkbMey with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$ppzCso9M with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -1046,7 +1048,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$mznUBehm with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$30tZaChm with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -1142,7 +1144,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$mznUBehm with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$30tZaChm with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -1155,7 +1157,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$9pIvyqHj with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$KjX6PvF4 with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -1251,7 +1253,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$9pIvyqHj with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$KjX6PvF4 with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -1264,7 +1266,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$GrMhcXFq with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$6YEIXo4l with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -1360,7 +1362,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$GrMhcXFq with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$6YEIXo4l with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -1373,7 +1375,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$jkeXDmnf with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$XqR32kgR with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -1469,7 +1471,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$jkeXDmnf with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$XqR32kgR with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -1482,7 +1484,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$pvL8WM3h with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$7mROwH4W with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -1578,7 +1580,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$pvL8WM3h with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$7mROwH4W with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -1591,7 +1593,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$h37WnT8E with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$ROBpVSet with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -1687,7 +1689,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$h37WnT8E with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$ROBpVSet with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -1700,7 +1702,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$CPzatxlV with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$LCCHXpl1 with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -1796,7 +1798,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$CPzatxlV with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$LCCHXpl1 with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -1809,7 +1811,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$WGqP8z0D with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$X4ogxbbp with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -1905,7 +1907,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$WGqP8z0D with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$X4ogxbbp with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -1918,7 +1920,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$U3b2TAcL with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$CB6YP365 with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -2014,7 +2016,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$U3b2TAcL with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$CB6YP365 with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -2027,7 +2029,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$qmmawCik with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$dAiCM3zq with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -2123,7 +2125,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$qmmawCik with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$dAiCM3zq with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -2136,7 +2138,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$0HLCQKlA with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$7rEH4m6y with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -2232,7 +2234,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$0HLCQKlA with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$7rEH4m6y with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -2245,7 +2247,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$cw9fIEzy with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$afF1Ogom with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -2341,7 +2343,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$cw9fIEzy with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$afF1Ogom with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -2354,7 +2356,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$eLznqHNN with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$hDvUT9M3 with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -2450,7 +2452,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$eLznqHNN with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$hDvUT9M3 with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -2463,7 +2465,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$S470LwMo with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$pXLLPcXQ with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -2559,7 +2561,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$S470LwMo with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$pXLLPcXQ with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -2572,7 +2574,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$TzZtRcma with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$9aWPR9Jf with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -2668,7 +2670,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$TzZtRcma with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$9aWPR9Jf with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -2681,7 +2683,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$4sXUNRS9 with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$DPfq3JLI with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -2777,7 +2779,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$4sXUNRS9 with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$DPfq3JLI with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -2790,7 +2792,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$HRiWNjx4 with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$I2CCPLZy with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -2886,7 +2888,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$HRiWNjx4 with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$I2CCPLZy with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -2899,7 +2901,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$YM0I45HQ with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$MymPLKcW with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -2995,7 +2997,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$YM0I45HQ with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$MymPLKcW with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -3008,7 +3010,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$5ccuz3F7 with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$YLyOfPNM with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -3104,7 +3106,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$5ccuz3F7 with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$YLyOfPNM with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -3117,7 +3119,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$mWGDcgT5 with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$3p6CRApE with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -3213,7 +3215,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$mWGDcgT5 with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$3p6CRApE with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -3226,7 +3228,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$ygsRh6lx with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$WV0tnT17 with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -3322,7 +3324,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$ygsRh6lx with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$WV0tnT17 with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -3335,7 +3337,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$g8ApxYqC with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$usLyUWyp with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -3431,7 +3433,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$g8ApxYqC with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$usLyUWyp with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -3444,7 +3446,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$PFAiBzGu with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$yLgwVG2Y with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -3540,7 +3542,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$PFAiBzGu with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$yLgwVG2Y with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -3553,7 +3555,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$qupljO7M with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$Tv4FHssU with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -3649,7 +3651,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$qupljO7M with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$Tv4FHssU with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -3662,7 +3664,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$qvL7aDPS with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$ZSYXi66r with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -3758,7 +3760,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$qvL7aDPS with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$ZSYXi66r with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -3771,7 +3773,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$MCDrlp9T with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$G7gnXQhH with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -3867,7 +3869,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$MCDrlp9T with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$G7gnXQhH with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -3880,7 +3882,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$CDamYcnK with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$RIdog7EO with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -3976,7 +3978,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$CDamYcnK with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$RIdog7EO with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -3989,7 +3991,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$gTqccfiS with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$MpagA4cB with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -4085,7 +4087,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$gTqccfiS with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$MpagA4cB with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -4098,7 +4100,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$6YXDcfwR with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$lKG3SCyf with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -4194,7 +4196,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$6YXDcfwR with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$lKG3SCyf with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -4207,7 +4209,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$OQijWW8B with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$9YHtYNHV with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -4303,7 +4305,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$OQijWW8B with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$9YHtYNHV with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -4316,7 +4318,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$b79mGmpA with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$l9NiAVZc with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -4412,7 +4414,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$b79mGmpA with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$l9NiAVZc with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -4425,7 +4427,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$WvJTDiBD with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$5UECCS2U with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -4521,7 +4523,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$WvJTDiBD with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$5UECCS2U with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -4534,7 +4536,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$dA0ZFOri with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$gcCWj932 with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -4630,7 +4632,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$dA0ZFOri with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$gcCWj932 with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -4643,7 +4645,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$TmGwSKW7 with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$cIlt6vvw with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -4739,7 +4741,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$TmGwSKW7 with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$cIlt6vvw with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -4752,7 +4754,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$TWqXegxW with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$KaXoGkky with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -4848,7 +4850,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$TWqXegxW with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$KaXoGkky with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -4861,7 +4863,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$CiSoGYkc with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$7UaEVro0 with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -4957,7 +4959,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$CiSoGYkc with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$7UaEVro0 with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -4970,7 +4972,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$ws8HWUMZ with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$3mkesSep with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -5066,7 +5068,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$ws8HWUMZ with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$3mkesSep with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -5079,7 +5081,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$fiVWnIkD with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$sY6ukYc7 with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -5175,7 +5177,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$fiVWnIkD with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$sY6ukYc7 with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -5188,7 +5190,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$KLaK7dx7 with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$LwcuJYFc with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -5284,7 +5286,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$KLaK7dx7 with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$LwcuJYFc with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -5297,7 +5299,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$iGYkLA1x with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$JPpBMjLD with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -5393,7 +5395,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$iGYkLA1x with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$JPpBMjLD with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -5406,7 +5408,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$27N7GZ3Q with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$X4wSuc2b with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -5502,7 +5504,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$27N7GZ3Q with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$X4wSuc2b with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -5515,7 +5517,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$EvlQl69D with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$TQVsXnhM with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -5611,7 +5613,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$EvlQl69D with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$TQVsXnhM with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -5624,7 +5626,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$QsEDYVOC with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$XJdxQvAC with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -5720,7 +5722,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$QsEDYVOC with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$XJdxQvAC with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -5733,7 +5735,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$vcxpGBse with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$DUpgbb4I with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -5829,7 +5831,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$vcxpGBse with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$DUpgbb4I with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -5842,7 +5844,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:77)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	... 95 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$hJnP4Bnt with JaCoCo 0.8.12.202403310830/dbfb6f2.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$y1Rc475M with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
@@ -5938,7 +5940,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$UG1VHEO4$auxiliary$hJnP4Bnt with JaCoCo 0.8.12.202403310830/dbfb6f2.
+Caused by: java.io.IOException: Error while instrumenting com/featureflag/repository/ApplicationRepository$MockitoMock$ZFZ9VeDB$auxiliary$y1Rc475M with JaCoCo 0.8.12.202403310830/dbfb6f2.
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
 	at org.jacoco.agent.rt.internal_aeaf9ab.core.instr.Instrumenter.instrument(Instrumenter.java:111)
 	at org.jacoco.agent.rt.internal_aeaf9ab.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -5953,7 +5955,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	... 95 more
 ]]></system-err>
   </testcase>
-  <testcase name="delete_notFound" classname="com.featureflag.service.ApplicationServiceTest" time="0.001"/>
-  <testcase name="create_success" classname="com.featureflag.service.ApplicationServiceTest" time="0.002"/>
+  <testcase name="delete_notFound" classname="com.featureflag.service.ApplicationServiceTest" time="0.002"/>
+  <testcase name="create_success" classname="com.featureflag.service.ApplicationServiceTest" time="0.004"/>
   <testcase name="create_duplicateName_throwsConflict" classname="com.featureflag.service.ApplicationServiceTest" time="0.001"/>
 </testsuite>
